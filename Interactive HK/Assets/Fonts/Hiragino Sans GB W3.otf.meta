@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0ede964075d28de4faa07eba5d1b5f6e
+timeCreated: 1488976974
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hiragino Sans GB
+  fontNames:
+  - Hiragino Sans GB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8a16832906a353443804bf0ee77fcfa4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1928373578405720}
+  m_IsPrefabParent: 1
+--- !u!1 &1928373578405720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4711263167199768}
+  - component: {fileID: 114948958177438650}
+  - component: {fileID: 82100102738469560}
+  m_Layer: 0
+  m_Name: TempForListen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4711263167199768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928373578405720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12, y: 0, z: 0.063316345}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82100102738469560
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928373578405720}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.711
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114948958177438650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928373578405720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0861a7b0a504db428ec581adeed799a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptAudio: {fileID: 8300000, guid: cbe6c69f5fc9497458c19e94789e45d7, type: 3}
+  questions:
+  - audio: {fileID: 8300000, guid: 06f6b624d5479344b8191a7707b6ed21, type: 3}
+    question: "\u6EF4\u6EF4\u7684\u58F0\u97F3\uFF1F| \u8FD9\u662F\u706B\u8B66\u94C3\u4E48\uFF1F\u597D\u50CF\u4E0D\u662F\u5462...|
+      \u54E6\uFF01\u8FD9\u662F\u7279\u5730\u4E3A\u76F2\u4EBA\u51C6\u5907\u7684____\uFF01"
+    correctAnswer: "\u6591\u9A6C\u7EBF\u94C3\u58F0"
+    wrongAnswer1: "\u4E0A\u8BFE\u94C3"
+    wrongAnswer2: "\u95F9\u949F"
+    wrongAnswer3: "\u7EA2\u7EFF\u706F"
+    ans: []
+  - audio: {fileID: 8300000, guid: 8d19bea7983d5c7479e37761a722df88, type: 3}
+    question: "\u5927\u6982\u662F\u56E0\u4E3A\u662F\u56FD\u9645\u6027\u5730\u90FD\u5E02\u5427\uFF0C|\u5C31\u8FDE____\u4E5F\u90FD\u6709\u591A\u79CD\u8BED\u8A00\u63D0\u9192\uFF1B"
+    correctAnswer: "\u5730\u94C1\u5173\u95E8"
+    wrongAnswer1: "\u7535\u68AF\u6276\u624B"
+    wrongAnswer2: "\u706B\u8F66\u51FA\u7AD9"
+    wrongAnswer3: "\u5587\u53ED"
+    ans: []
+  - audio: {fileID: 8300000, guid: 870b263e8447d3f4291f4523e75c0983, type: 3}
+    question: "\u6211\u602F\u751F\u751F\u5730\u627E\u4EBA\u95EE\u8D77\u5EFA\u7B51\u7684\u6765\u5386\uFF0C|
+      \u5C45\u7136\u5F97\u5230\u4E86\u5F88\u70ED\u60C5\u7684\u56DE\u5E94\uFF01| \u5F00\u5FC3~\u30FE(o\u25D5\u2200\u25D5)\uFF89\u30FE|
+      \u4EE5\u53CA\uFF0C\u54C8\u54C8\uFF0C\u8FD9\u96BE\u9053\u5C31\u662F\u4F20\u8BF4\u4E2D\u7684____"
+    correctAnswer: "\u7CA4\u666E"
+    wrongAnswer1: "\u5DDD\u666E"
+    wrongAnswer2: "\u798F\u5EFA\u666E"
+    wrongAnswer3: "\u4E1C\u5317"
+    ans: []
+  - audio: {fileID: 8300000, guid: d99d5f2ed79726d46b28d197cd83be05, type: 3}
+    question: "\u5608\u6742\u4EA4\u8C08\u7684\u58F0\u97F3\uFF0C\u74F7\u5668\u78D5\u78B0\u7684\u58F0\u97F3\uFF0C|
+      \u8FD9\u662F\u9999\u6E2F\u7684\u8336\u9910\u5385\u554A\uFF0C\u5FEB\u6765\u5750\u5750\u5427\uFF0C|
+      \u4FD7\u8BDD\u8BF4\u5F97\u597D\uFF1A\u201C____\uFF0C\u723D\u8FC7\u5438\u5927\u9EBB\u201D"
+    correctAnswer: "\u7EF4\u4ED6\u67E0\u6AAC\u8336"
+    wrongAnswer1: "\u51FA\u95E8\u4E0D\u6253\u4F1E"
+    wrongAnswer2: "\u6536\u85CF\u4E0D\u70B9\u8D5E"
+    wrongAnswer3: "\u6E38\u4E50\u573A"
+    ans: []
+  - audio: {fileID: 8300000, guid: cca63c5e9945db54eb600bd4e9bf3d76, type: 3}
+    question: "\u6069\uFF0C\u867D\u7136\u82F1\u8BED\u8FD8\u662F\u4E0D\u80FD\u5B8C\u5168\u9002\u5E94\uFF0C|
+      \u4F46\u662F\u8FD9\u8FD8\u662F\u5F88\u6E05\u695A\u662F____        | \u5F88\u591A\u5BB6\u957F\u90FD\u5E26\u7740\u5C0F\u670B\u53CB\u6765\u8FD9\u5462\uFF1B
+      \  | \u5927\u6982\u4ED6\u4EEC\u4E5F\u60F3\u8981\u5BFB\u627E\u81EA\u5DF1\u7684\u8BA4\u540C\u5427\u3002"
+    correctAnswer: "\u535A\u7269\u9986"
+    wrongAnswer1: "\u5496\u5561\u5385"
+    wrongAnswer2: "\u6E38\u4E50\u573A"
+    wrongAnswer3: "\u5927\u8857\u4E0A"
+    ans: []
+  - audio: {fileID: 8300000, guid: 3a4a1aafca1f53649a2d8b6c9238ee6f, type: 3}
+    question: "\u535A\u7269\u9986\u4E2D\u542C\u5230\u8FD9\u9996\u6B4C\uFF0C| \u4EFF\u4F5B\u542C\u7740\u5C31\u770B\u5230\u4E86\u90A3\u4E2A\u65F6\u4EE3\uFF0C|
+      \u53E4\u8001\u4E0E\u73B0\u4EE3\u7684\u6DF7\u5408\uFF0C\u706F\u706B\u8F89\u714C\uFF0C\u8F7B\u6B4C\u66FC\u821E\u3002|
+      \u8FD9\u4E2A\u7248\u672C\u7684\u591C\u6765\u9999\u662F____\u5531\u7684\uFF0C\u4E5F\u662F\u6700\u65E9\u7684\u7248\u672C\u3002"
+    correctAnswer: "\u674E\u9999\u5170"
+    wrongAnswer1: "\u9093\u4E3D\u541B"
+    wrongAnswer2: "\u9ECE\u4FCA\u745E"
+    wrongAnswer3: 4
+    ans: []
+  answerLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wall: {fileID: 0}
+  correctRatio: 0.99
+  questionText: {fileID: 0}
+  choiceText: {fileID: 0}
+  statusText: {fileID: 0}
