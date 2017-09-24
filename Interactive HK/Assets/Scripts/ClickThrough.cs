@@ -5,9 +5,6 @@ public class ClickThrough : MonoBehaviour {
 	
 	public float range;
 
-	AudioMatchManager amm;
-	public WordCloudMain wcm;
-
 	int clickableMask;
 	Ray shootRay;
 	RaycastHit shootHit;
@@ -53,17 +50,11 @@ public class ClickThrough : MonoBehaviour {
                 if (trigger != null) {
                     trigger.OuterChangeState(true);
                 } else if (coll.CompareTag ("AudioButton")) {
-					amm.ChooseAudio (coll.name);
-					Debug.Log ("AudioButton Choosed:" + coll.name);
-					// TODO play audio
+					
 				} else if (coll.CompareTag ("PictureLabel")) {
-					amm.ChoosePicture (coll.name);
-					Debug.Log ("PictureLabel Choosed:" + coll.name);
-					// TODO stop audio
+					
 				} else if (coll.CompareTag ("TextZone")) {
-					TextZoneFadeAnimation script = coll.GetComponentInChildren<TextZoneFadeAnimation> ();
-					script.FadeIn ();
-					wcm.BeginCheck ();
+					
 				} else if (coll.CompareTag ("ChoiceButton")) {
 					string name = coll.name;
 					int which = -1;
