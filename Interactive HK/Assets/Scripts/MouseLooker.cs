@@ -18,6 +18,9 @@ public class MouseLooker : MonoBehaviour {
 	private Transform character;
 	private Transform cameraTransform;
 
+    private float m_SmoothTime;
+    private float m_DisableInputTimeLeft;
+
 	void Start() {
 		// start the game with the cursor locked
 		LockCursor (true);
@@ -31,9 +34,21 @@ public class MouseLooker : MonoBehaviour {
 		// get the location rotation of the character and the camera
 		m_CharacterTargetRot = character.localRotation;
 		m_CameraTargetRot = cameraTransform.localRotation;
+
+        // set smooth time
+        m_SmoothTime = smoothTime;
 	}
 	
 	void Update() {
+        // whether disable input
+        if (m_DisableInputTimeLeft > 0)
+        {
+            m_DisableInputTimeLeft -= Time.deltaTime;
+        } else
+        {
+            m_SmoothTime = smoothTime; // reset smooth time;
+        }
+
 		// rotate stuff based on the mouse
 		LookRotation ();
 
@@ -72,6 +87,12 @@ public class MouseLooker : MonoBehaviour {
 		float yRot = Input.GetAxis("Mouse X") * XSensitivity;
 		float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
 
+        // check if input is disabled
+        if (m_DisableInputTimeLeft > 0)
+        {
+            xRot = yRot = 0;
+        }
+
 		// calculate the rotation
 		m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
 		m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
@@ -84,9 +105,9 @@ public class MouseLooker : MonoBehaviour {
 		if(smooth) // if smooth, then slerp over time
 		{
 			character.localRotation = Quaternion.Slerp (character.localRotation, m_CharacterTargetRot,
-			                                            smoothTime * Time.deltaTime);
+                                                        m_SmoothTime * Time.deltaTime);
 			cameraTransform.localRotation = Quaternion.Slerp (cameraTransform.localRotation, m_CameraTargetRot,
-			                                         smoothTime * Time.deltaTime);
+                                                     m_SmoothTime * Time.deltaTime);
 		}
 		else // not smooth, so just jump
 		{
@@ -94,9 +115,40 @@ public class MouseLooker : MonoBehaviour {
 			cameraTransform.localRotation = m_CameraTargetRot;
 		}
 	}
-	
-	// Some math ... eeck!
-	Quaternion ClampRotationAroundXAxis(Quaternion q)
+
+    public void LookAt(Vector3 pos, float smoothTime, float disableInputTime)
+    {
+        m_DisableInputTimeLeft = disableInputTime;
+        m_SmoothTime = smoothTime;
+
+        Vector3 dir = pos - transform.position;
+        var q = Quaternion.LookRotation(dir);
+
+        // calculate the rotation
+        m_CharacterTargetRot = Quaternion.Euler(0f, q.eulerAngles.y, 0f);
+        m_CameraTargetRot = Quaternion.Euler(q.eulerAngles.x, 0f, 0f);
+
+        // clamp the vertical rotation if specified
+        if (clampVerticalRotation)
+            m_CameraTargetRot = ClampRotationAroundXAxis(m_CameraTargetRot);
+
+        // update the character and camera based on calculations
+        if (smooth) // if smooth, then slerp over time
+        {
+            character.localRotation = Quaternion.Slerp(character.localRotation, m_CharacterTargetRot,
+                                                        m_SmoothTime * Time.deltaTime);
+            cameraTransform.localRotation = Quaternion.Slerp(cameraTransform.localRotation, m_CameraTargetRot,
+                                                     m_SmoothTime * Time.deltaTime);
+        }
+        else // not smooth, so just jump
+        {
+            character.localRotation = m_CharacterTargetRot;
+            cameraTransform.localRotation = m_CameraTargetRot;
+        }
+    }
+
+    // Some math ... eeck!
+    Quaternion ClampRotationAroundXAxis(Quaternion q)
 	{
 		q.x /= q.w;
 		q.y /= q.w;
