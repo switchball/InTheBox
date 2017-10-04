@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class PassSubtitleTrigger : MonoBehaviour {
 
     public TransitionManager transitionManager;
+    public bool hideRenderWhenPlay = true;
 
     public bool 是否强制移动视角 = true;
 
@@ -30,7 +31,13 @@ public class PassSubtitleTrigger : MonoBehaviour {
 
     private void Start()
     {
-        
+        var ren = gameObject.GetComponent<Renderer>();
+        if (hideRenderWhenPlay)
+        {
+            if (ren != null)
+                ren.enabled = false;
+        }
+        //RectTransformUtility.ScreenPointToLocalPointInRectangle()
     }
 
     public void OnTriggerEnter(Collider coll)

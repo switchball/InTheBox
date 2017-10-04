@@ -147,6 +147,12 @@ public class MouseLooker : MonoBehaviour {
         }
     }
 
+    public Quaternion GetRotation()
+    {
+        Vector3 euler = character.localRotation.eulerAngles + cameraTransform.localRotation.eulerAngles;
+        return Quaternion.Euler(euler);
+    }
+
     // Some math ... eeck!
     Quaternion ClampRotationAroundXAxis(Quaternion q)
 	{
