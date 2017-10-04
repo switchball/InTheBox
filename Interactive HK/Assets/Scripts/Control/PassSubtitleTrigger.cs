@@ -30,7 +30,7 @@ public class PassSubtitleTrigger : MonoBehaviour {
 
     private void Start()
     {
-        noname();
+        
     }
 
     public void OnTriggerEnter(Collider coll)

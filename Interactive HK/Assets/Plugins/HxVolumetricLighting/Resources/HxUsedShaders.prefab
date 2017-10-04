@@ -23,9 +23,9 @@ MonoBehaviour:
   NoiseOff: 1
   Transparency: 0
   TransparencyOff: 1
-  DensityParticles: 0
-  Point: 0
-  Spot: 0
+  DensityParticles: 1
+  Point: 1
+  Spot: 1
   Directional: 1
   SinglePassStereo: 0
   Projector: 0
@@ -37,9 +37,9 @@ MonoBehaviour:
   NoiseOffLast: 1
   TransparencyLast: 0
   TransparencyOffLast: 1
-  DensityParticlesLast: 0
-  PointLast: 0
-  SpotLast: 0
+  DensityParticlesLast: 1
+  PointLast: 1
+  SpotLast: 1
   DirectionalLast: 1
   SinglePassStereoLast: 0
   ProjectorLast: 0
