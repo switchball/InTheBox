@@ -36,6 +36,14 @@ public class RespondToAction : MonoBehaviour {
             mInView = IsInViewpoint();
         }
         // TODO 如果在视野内，则播放动画
+        if (mInView && gameObject.GetComponent<Animation>())
+        {
+            gameObject.GetComponent<Animation>()["CubeOpen"].speed = 1.0f;
+            gameObject.GetComponent<Animation>().Play();
+        } else
+        {
+            gameObject.GetComponent<Animation>()["CubeOpen"].speed = -1.0f;
+        }
 
         // 如果点击了鼠标，则触发transition动画
         if (mInView && Input.GetMouseButtonDown(0))
