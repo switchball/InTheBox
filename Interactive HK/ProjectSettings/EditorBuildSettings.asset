@@ -7,11 +7,19 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/_Scenes/Pintu.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/_Scenes/Main.unity
-  - enabled: 1
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/_Scenes/_TitleScene.unity
-  - enabled: 1
+    guid: f3184da365feb504c8107fd698bbd59f
+  - enabled: 0
     path: Assets/_Scenes/Mesumn.unity
-  - enabled: 1
+    guid: 16fb1cef07537c04483921906dc70e22
+  - enabled: 0
     path: Assets/_Scenes/S_2.unity
+    guid: 0811bbfc4f988a44b933fb7d54308257
+  - enabled: 1
+    path: Assets/_Scenes/corridor.unity
+    guid: 18a07449abc1269498874489849e55c0

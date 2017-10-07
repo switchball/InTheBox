@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0bd82e7d1799415448f11cc405464ba1
+timeCreated: 1507381707
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HYQiHei
+  fontNames:
+  - HYQiHei
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
