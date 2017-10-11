@@ -1232,7 +1232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1116411103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeID: 0
-  LevelToLoad: DiveUnityDemo
+  LevelToLoad: hk_1_1
   SplashLogo: {fileID: 0}
   SplashLogoList:
   - {fileID: 2800000, guid: 8742fbec2f813a343b9fdd731f7d1bbf, type: 3}

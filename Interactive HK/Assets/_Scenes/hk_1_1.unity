@@ -6890,6 +6890,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -286.284
       objectReference: {fileID: 0}
+    - target: {fileID: 114086596352257848, guid: 5e8708f564f769e4a8f4ba038ed73b0d,
+        type: 2}
+      propertyPath: inEulerAngles.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086596352257848, guid: 5e8708f564f769e4a8f4ba038ed73b0d,
+        type: 2}
+      propertyPath: outEulerAngles.y
+      value: 135
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e8708f564f769e4a8f4ba038ed73b0d, type: 2}
   m_IsPrefabParent: 0
@@ -10441,6 +10451,54 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2001040799}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2005244064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2005244066}
+  - component: {fileID: 2005244065}
+  m_Layer: 0
+  m_Name: SceneJumpScripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2005244065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005244064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799c1159196373c41a809d40ff79f19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modeID: 0
+  LevelToLoad: _TitleScene
+  SplashLogo: {fileID: 2800000, guid: 8742fbec2f813a343b9fdd731f7d1bbf, type: 3}
+  SplashLogoList: []
+  FadeSpeed: 0.25
+  WaitTime: 4
+  Type: 0
+  WaitForInput: 1
+--- !u!4 &2005244066
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005244064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -128.03752, y: 5.3999996, z: 12.790442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027423764
 GameObject:
   m_ObjectHideFlags: 0

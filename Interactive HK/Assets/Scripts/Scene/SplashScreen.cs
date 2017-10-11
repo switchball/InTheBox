@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SplashScreen : MonoBehaviour
@@ -6,7 +7,7 @@ public class SplashScreen : MonoBehaviour
     //模式id
     public int modeID = 0;
     //要加载的关卡
-    public string LevelToLoad = "DiveUnityDemo";
+    public string LevelToLoad = "";
     //Logo贴图
     public Texture2D SplashLogo;
     //Logos贴图
@@ -61,6 +62,12 @@ public class SplashScreen : MonoBehaviour
             mSplashLogoPos.y = (Screen.height * 0.5F - SplashLogo.height * 0.5F);
             mSplashLogoPos.width = SplashLogo.width;
             mSplashLogoPos.height = SplashLogo.height;
+        }
+        if (SplashLogo != null && SplashLogoList.Length == 0)
+        {
+            SplashLogoList = new Texture2D[1];
+            SplashLogoList[0] = SplashLogo;
+            modeID = 0;
         }
         //如果是渐出后加载关卡则保留相机
         if (Type == SplashType.LoadLevelThenFadeOut)
@@ -141,8 +148,10 @@ public class SplashScreen : MonoBehaviour
                 //如果需要在渐入结束后加载关卡
                 if (Type == SplashType.LoadLevelThenFadeOut)
                 {
+                    Debug.LogWarning("LoadLevelThenFadeOut");
                     mCam.depth = -1000;
-
+                    SceneManager.LoadScene(LevelToLoad);
+                    //StartCoroutine(LoadSence());
                 }
             }
 
@@ -151,7 +160,9 @@ public class SplashScreen : MonoBehaviour
                 //如果需要在关卡加载完后渐出
                 if (Type == SplashType.FadeOutThenLoadLevel)
                 {
-                    //Application.LoadLevel("sence2");
+                    Debug.LogWarning("FadeOutThenLoadLevel");
+
+                    //StartCoroutine(LoadSence());
                 }
                 else
                 {
@@ -164,15 +175,21 @@ public class SplashScreen : MonoBehaviour
         if (mStatus == FadeStatus.FadeWait)
         {
             mStatus = FadeStatus.FadeOut;
-            //StartCoroutine("loadSence2");
+            Debug.LogWarning("FadeWait");
+
+            //StartCoroutine(LoadSence());
             //Debug.Log("请按任意键继续");   
         }
+
+        
     }
 
-    public IEnumerator LoadSence2()
+    public IEnumerator LoadSence()
     {
-        yield return new WaitForSeconds(2f);
-        Application.LoadLevel("sence2");
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(WaitTime);
+        Destroy(this.gameObject);
 
     }
     void OnLevelWasLoaded(int index)
@@ -180,8 +197,8 @@ public class SplashScreen : MonoBehaviour
         //如果目标关卡已加载需要手动销毁场景中的GUI和AudioListener
         if (LevelisLoaded)
         {
-            Destroy(mCam.GetComponent<AudioListener>());
-            Destroy(mCam.GetComponent<GUILayer>());
+            //Destroy(mCam.GetComponent<AudioListener>());
+            //Destroy(mCam.GetComponent<GUILayer>());
         }
     }
 
