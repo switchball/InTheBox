@@ -81,7 +81,19 @@ public class MouseLooker : MonoBehaviour {
 		}
 	}
 
-	public void LookRotation()
+    public void DisableMove()
+    {
+        m_DisableInputTimeLeft = 1000000;
+        LockCursor(false);
+    }
+
+    public void EnableMove()
+    {
+        m_DisableInputTimeLeft = 0;
+        LockCursor(true);
+    }
+
+    public void LookRotation()
 	{
 		//get the y and x rotation based on the Input manager
 		float yRot = Input.GetAxis("Mouse X") * XSensitivity;

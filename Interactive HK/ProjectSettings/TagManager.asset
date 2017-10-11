@@ -21,6 +21,7 @@ TagManager:
   - SubstitleText2
   - SubstitleText3
   - SubstitleTextBlack
+  - OverlayCanvas
   layers:
   - Default
   - TransparentFX

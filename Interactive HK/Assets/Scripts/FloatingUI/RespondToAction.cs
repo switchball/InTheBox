@@ -9,6 +9,10 @@ public class RespondToAction : MonoBehaviour {
 
     public TransitionManager transitionManager;
 
+    public ReadingIt whatToRead;
+
+    public bool 点击一次后消失 = true;
+
     private GameObject player;
     private Animator anim;
     private bool mInView;
@@ -59,8 +63,12 @@ public class RespondToAction : MonoBehaviour {
         if (mInView && Input.GetMouseButtonDown(0))
         {
             Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
-            transitionManager.TransitionIn();
-            StartCoroutine(LateDisable());
+            if (transitionManager)
+                transitionManager.TransitionIn();
+            if (whatToRead && whatToRead.GetReadingStatus() == false) 
+                whatToRead.StartReading();
+            if (点击一次后消失)
+                StartCoroutine(LateDisable());
         }
 
     }
@@ -68,7 +76,7 @@ public class RespondToAction : MonoBehaviour {
     IEnumerator LateDisable()
     {
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
 
         gameObject.SetActive(false);
         //Do Function here...
@@ -77,8 +85,8 @@ public class RespondToAction : MonoBehaviour {
     private bool IsInViewpoint()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        return 0.2f <= pos.x && pos.x <= 0.8f
-            && 0.2f <= pos.y && pos.y <= 0.8f
-            && 1.0f <= pos.z;
+        return 0.1f <= pos.x && pos.x <= 0.9f
+            && 0.1f <= pos.y && pos.y <= 0.9f
+            && 0.1f <= pos.z;
     }
 }

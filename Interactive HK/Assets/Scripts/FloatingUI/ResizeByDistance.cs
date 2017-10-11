@@ -11,11 +11,14 @@ public class ResizeByDistance : MonoBehaviour {
     public Vector2 visibleDistance;
     private Vector3 mScale;
     private GameObject player;
+    private MouseLooker looker;
+
+    private float distance;
 
     [ColorUsage(true, true, 0, 8, 0.125f, 3)]
-    private Color colorIn = Color.white;
+    public Color colorIn = Color.white;
     [ColorUsage(true, true, 0, 8, 0.125f, 3)]
-    private Color colorOut = new Color(1, 1, 1, 0);
+    public Color colorOut = new Color(1, 1, 1, 0);
 
     private ColorDisplayer colorDisplayer;
 
@@ -46,16 +49,25 @@ public class ResizeByDistance : MonoBehaviour {
             visibleDistance = new Vector2(standardDistance/2, standardDistance);
         }
         player = GameObject.FindGameObjectWithTag("Player");
-
+        looker = player.GetComponent<MouseLooker>();
     }
 
     // Update is called once per frame
     void Update () {
         Vector3 v = player.transform.position - transform.position;
-        float d = v.magnitude;
-        float ratio = d / standardDistance;
+        distance = v.magnitude;
+        if (looker)
+        {
+            Quaternion q1 = looker.GetRotation();
+            Quaternion q2 = Quaternion.LookRotation(-v);
+            float angle = Quaternion.Angle(q1, q2);
+            var d = distance * Mathf.Cos(Mathf.Deg2Rad * angle);
+            //Debug.Log("Angle: " + angle + ", distace: " + distance + ", d=" + d);
+            distance = d;
+        }
+        float ratio = distance / standardDistance;
         transform.localScale = mScale * ratio;
-        float progress = Mathf.InverseLerp(visibleDistance.x, visibleDistance.y, d);
+        float progress = Mathf.InverseLerp(visibleDistance.x, visibleDistance.y, distance);
         ColorDisplayer.Display(Color.Lerp(colorIn, colorOut, progress));
     }
 }
