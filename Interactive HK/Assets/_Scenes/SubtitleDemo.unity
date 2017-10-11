@@ -191,8 +191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a880f0e1e5282eb40a2e90b1f627a2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  image: {fileID: 0}
+  canvas: {fileID: 146402603}
+  image: {fileID: 1152791384}
+  "\u5899\u4E0A\u7684\u56FE\u7247": {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a,
+    type: 3}
+  "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
+  - {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a, type: 3}
   lastTimeAtLeast: 2
 --- !u!1 &146402600
 GameObject:
@@ -422,8 +426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardDistance: 100
   visibleDistance: {x: 5, y: 10}
-  colorIn: {r: 1, g: 0, b: 0, a: 1}
-  colorOut: {r: 1, g: 0, b: 0, a: 0}
+  colorIn: {r: 1, g: 1, b: 1, a: 1}
+  colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &749030743
 MonoBehaviour:
   m_ObjectHideFlags: 0

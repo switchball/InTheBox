@@ -62,13 +62,16 @@ public class RespondToAction : MonoBehaviour {
         // 如果点击了鼠标，则触发transition动画
         if (mInView && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
-            if (transitionManager)
-                transitionManager.TransitionIn();
-            if (whatToRead && whatToRead.GetReadingStatus() == false) 
-                whatToRead.StartReading();
-            if (点击一次后消失)
-                StartCoroutine(LateDisable());
+            if (whatToRead) {
+                if (whatToRead.GetReadingStatus() == false)
+                    whatToRead.StartReading();
+            } else {
+                Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
+                if (transitionManager)
+                    transitionManager.TransitionIn();
+                if (点击一次后消失)
+                    StartCoroutine(LateDisable());
+            }
         }
 
     }
