@@ -23,10 +23,10 @@ public class HxVolumetricParticleSystem : MonoBehaviour
         
         if (octreeNode == null)
         {
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
             if(Application.isPlaying == false)
             GetComponent<ParticleSystem>().Simulate(0);
-#endif
+//#endif
             HxVolumetricCamera.AllParticleSystems.Add(this);
             octreeNode = HxVolumetricCamera.AddParticleOctree(this, minBounds, maxBounds);
         }

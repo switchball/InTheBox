@@ -13,8 +13,11 @@ public class TowardPlayer : MonoBehaviour {
 	
 	void Update () {
         //Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        Quaternion rotation = locker.GetRotation();
-        gameObject.transform.rotation = rotation;
+        if (locker != null)
+        {
+            Quaternion rotation = locker.GetRotation();
+            gameObject.transform.rotation = rotation;
+        }
         //gameObject.transform.eulerAngles = gameObject.transform.eulerAngles + new Vector3(0, 180, 0);
     }
 }

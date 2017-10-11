@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0041427487, g: 0.00023607665, b: 0.00000017734796,
+  m_IndirectSpecularColor: {r: 0.0041427473, g: 0.0002360776, b: 0.00000017738421,
     a: 1}
 --- !u!157 &3
 LightmapSettings:
@@ -350,7 +350,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 103822014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77999985, y: 5, z: -33.24}
+  m_LocalPosition: {x: 0.77999985, y: 2.88, z: -16.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243784475}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12601acaf9af72343b85bace4eb57570, type: 3}
   m_Name: 
@@ -1294,6 +1294,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &950120239 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114086596352257848, guid: 5e8708f564f769e4a8f4ba038ed73b0d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037685854}
+  m_Script: {fileID: 11500000, guid: 679c3bda5a8c42f47a95c1f99654b7eb, type: 3}
 --- !u!1 &954228540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1345,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954228540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.1, z: -18.8}
+  m_LocalPosition: {x: 0, y: 2.67, z: -3.04}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1409,8 +1415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52562ee1b4bac1b4fb330e539493e0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardDistance: 0
-  visibleDistance: {x: 0, y: 0}
+  standardDistance: 10
+  visibleDistance: {x: 5, y: 10}
 --- !u!114 &954228546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,8 +1441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a6aa7f125ce164088f76768006aebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RespondDistance: 0
-  transitionManager: {fileID: 0}
+  RespondDistance: 10
+  transitionManager: {fileID: 950120239}
 --- !u!1 &1051742600
 GameObject:
   m_ObjectHideFlags: 0
