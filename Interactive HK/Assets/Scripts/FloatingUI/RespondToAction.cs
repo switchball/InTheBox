@@ -10,11 +10,13 @@ public class RespondToAction : MonoBehaviour {
     public TransitionManager transitionManager;
 
     private GameObject player;
+    private Animator anim;
     private bool mInView;
 
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
         if (RespondDistance == 0)
         {
             Debug.LogWarning("需要设置响应操作时玩家距离物体的最大范围，自动重置为5");
@@ -30,19 +32,27 @@ public class RespondToAction : MonoBehaviour {
         if (d > RespondDistance)
         {
             mInView = false;
-            return;
         } else
         {
             mInView = IsInViewpoint();
         }
         // TODO 如果在视野内，则播放动画
-        if (mInView && gameObject.GetComponent<Animation>())
+        if (anim != null)
         {
-            gameObject.GetComponent<Animation>()["CubeOpen"].speed = 1.0f;
-            gameObject.GetComponent<Animation>().Play();
-        } else
-        {
-            gameObject.GetComponent<Animation>()["CubeOpen"].speed = -1.0f;
+            if (mInView)
+            {
+                anim.SetBool("Reverse", false);
+                //Debug.LogWarning("in view");
+                anim.StopPlayback();
+                anim.Play("CubeOpen0");
+            }
+            else
+            {
+                anim.SetBool("Reverse", true);
+                //Debug.LogWarning("not in view");
+                anim.StopPlayback();
+                anim.Play("CubeClose0");
+            }
         }
 
         // 如果点击了鼠标，则触发transition动画
@@ -50,9 +60,18 @@ public class RespondToAction : MonoBehaviour {
         {
             Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
             transitionManager.TransitionIn();
-            gameObject.SetActive(false);
+            StartCoroutine(LateDisable());
         }
 
+    }
+
+    IEnumerator LateDisable()
+    {
+
+        yield return new WaitForSeconds(2);
+
+        gameObject.SetActive(false);
+        //Do Function here...
     }
 
     private bool IsInViewpoint()

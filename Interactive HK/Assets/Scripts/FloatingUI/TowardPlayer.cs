@@ -13,7 +13,7 @@ public class TowardPlayer : MonoBehaviour {
 	
 	void Update () {
         //Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        if (locker != null)
+        if (locker != null && locker.enabled)
         {
             Quaternion rotation = locker.GetRotation();
             gameObject.transform.rotation = rotation;

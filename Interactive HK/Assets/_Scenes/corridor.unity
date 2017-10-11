@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!111 &103822015
 Animation:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243784475}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12601acaf9af72343b85bace4eb57570, type: 3}
   m_Name: 
@@ -579,10 +579,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: 1.1291822
+    e00: 0.7648594
     e01: 0
     e02: 0
-    e03: 0.022583643
+    e03: 0.0152971875
     e10: -0
     e11: -1.7320508
     e12: 0
@@ -596,10 +596,10 @@ MonoBehaviour:
     e32: 1
     e33: 66.32
   LastMatrixVP:
-    e00: 1.1291822
+    e00: 0.7648594
     e01: 0
     e02: 0
-    e03: 0.022583643
+    e03: 0.0152971875
     e10: 0
     e11: 1.7320508
     e12: 0
@@ -802,6 +802,7 @@ GameObject:
   - component: {fileID: 338885226}
   - component: {fileID: 338885225}
   - component: {fileID: 338885223}
+  - component: {fileID: 338885224}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -826,6 +827,24 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &338885224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338885222}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc93eed2233384438debfd124ba4555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XSensitivity: 2
+  YSensitivity: 2
+  clampVerticalRotation: 1
+  MinimumX: -90
+  MaximumX: 90
+  smooth: 0
+  smoothTime: 5
 --- !u!114 &338885225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,7 +1336,7 @@ GameObject:
   m_Layer: 0
   m_Name: AnimHint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1345,7 +1364,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954228540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.67, z: -3.04}
+  m_LocalPosition: {x: 0, y: 2.18, z: -2.16}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1415,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52562ee1b4bac1b4fb330e539493e0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardDistance: 10
+  standardDistance: 4
   visibleDistance: {x: 5, y: 10}
 --- !u!114 &954228546
 MonoBehaviour:
@@ -1441,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a6aa7f125ce164088f76768006aebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RespondDistance: 10
+  RespondDistance: 5
   transitionManager: {fileID: 950120239}
 --- !u!1 &1051742600
 GameObject:
@@ -2371,7 +2390,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 827.27216, y: 827.27216, z: 0}
+  Offset: {x: 827.9588, y: 827.9588, z: 0}
 --- !u!1 &1788326861
 GameObject:
   m_ObjectHideFlags: 0
