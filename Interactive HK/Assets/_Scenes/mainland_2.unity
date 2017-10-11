@@ -5690,7 +5690,7 @@ MonoBehaviour:
   FogTransitionSize: 33
   MaxLightDistance: 128
   AboveFogPercent: 4.02
-  Offset: {x: 3209.4631, y: 3209.4631, z: 0}
+  Offset: {x: 3230.9514, y: 3230.9514, z: 0}
 --- !u!1001 &1701626932
 Prefab:
   m_ObjectHideFlags: 0
