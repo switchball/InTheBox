@@ -112,7 +112,6 @@ public abstract class TransitionManager : MonoBehaviour, ITransition
 
 	public void TransitionIn (bool instant)
 	{
-        Debug.Log("TM: TransitionIn(bool)" + instant);
         if (outWhenAwake && State == StateTypes.Unkown)
 			TransitionOut (true);
 		

@@ -16,6 +16,10 @@ public class PassSubtitleTrigger : MonoBehaviour {
     public float 视角移动速度 = 1.5f;
     public float 锁定操作时间 = 2.0f;
 
+    public UnityEvent onFirstPass;
+
+    private bool bPassed;
+
     MouseLooker locker;
     Vector3 posSubtitle;
 
@@ -37,7 +41,7 @@ public class PassSubtitleTrigger : MonoBehaviour {
             if (ren != null)
                 ren.enabled = false;
         }
-        //RectTransformUtility.ScreenPointToLocalPointInRectangle()
+        bPassed = false;
     }
 
     public void OnTriggerEnter(Collider coll)
@@ -51,6 +55,12 @@ public class PassSubtitleTrigger : MonoBehaviour {
     public void OnTriggerExit(Collider coll)
     {
         transitionManager.TransitionOut();
+        if (!bPassed)
+        {
+            bPassed = true;
+            // Invoke FirstPass Event
+            onFirstPass.Invoke();
+        }
     }
 
     private void Update()
@@ -65,6 +75,8 @@ public class PassSubtitleTrigger : MonoBehaviour {
 
     private bool IsInViewpoint()
     {
+        if (!Camera.main)
+            return false;
         Vector3 pos = Camera.main.WorldToViewportPoint(posSubtitle);
         return 0.2f <= pos.x && pos.x <= 0.8f
             && 0.2f <= pos.y && pos.y <= 0.8f

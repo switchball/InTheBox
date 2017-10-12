@@ -8,12 +8,14 @@ public class ReadingIt : MonoBehaviour {
     [Header("使用方法：拖到带有图片的组件上")]
     [Header("然后右击选择->Init，可自动完成部分设置")]
     public Canvas canvas;
+    public Image panelImage;
     public Image image;
-    public Text text;
+    public Text centerText;
+    public Text cornerText;
 
     public Sprite 墙上的图片;
     public Sprite[] 浮现的图片2张;
-    public float lastTimeAtLeast = 2.0f;
+    public float lastTimeAtLeast = 0.5f;
 
     private SpriteRenderer render;
 
@@ -29,8 +31,10 @@ public class ReadingIt : MonoBehaviour {
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("OverlayCanvas").GetComponent<Canvas>();
+        panelImage = canvas.transform.Find("Panel").GetComponent<Image>();
         image = canvas.transform.Find("Panel/Image").GetComponent<Image>();
-        text = canvas.transform.Find("Text").GetComponent<Text>();
+        centerText = canvas.transform.Find("CenterText").GetComponent<Text>();
+        cornerText = canvas.transform.Find("CornerText").GetComponent<Text>();
         墙上的图片 = gameObject.GetComponent<SpriteRenderer>().sprite;
         if (浮现的图片2张 == null || 浮现的图片2张.Length == 0)
         {
@@ -95,6 +99,7 @@ public class ReadingIt : MonoBehaviour {
         }
         // Replace Image
         image.sprite = 浮现的图片2张[spriteIndex];
+        panelImage.enabled = true;
         image.enabled = true;
 
         isReading = true;
@@ -117,6 +122,7 @@ public class ReadingIt : MonoBehaviour {
             control.enabled = true;
 
         // Disable Image
+        panelImage.enabled = false;
         image.enabled = false;
 
         StartCoroutine(DelayedReading(0.2f, false));
@@ -124,7 +130,7 @@ public class ReadingIt : MonoBehaviour {
         //isReading = false;
 
         // Transition
-        text.GetComponent<TransitionCommand>().Execute();
+        cornerText.GetComponent<TransitionCommand>().Execute();
     }
 
     public bool GetReadingStatus()

@@ -17,6 +17,7 @@ public class SplashScreen : MonoBehaviour
     //等待时间
     public float WaitTime = 0.5F;
 
+    public float DelayTime = 2F;
     #region 渐入渐出的类型
     public enum SplashType
     {
@@ -47,11 +48,14 @@ public class SplashScreen : MonoBehaviour
     private Rect mSplashLogoPos;
     //渐入结束的时间
     private float mFadeInFinishedTime;
+
+    private float mDelayTimeLeft;
     //关卡是否加载完毕
     private bool LevelisLoaded = false;
 
     void Start()
     {
+        mDelayTimeLeft = DelayTime;
         //保存相机
         mCam = Camera.main;
         mCamObj = Camera.main.gameObject;
@@ -85,6 +89,10 @@ public class SplashScreen : MonoBehaviour
 
     void Update()
     {
+        mDelayTimeLeft -= Time.deltaTime;
+        if (mDelayTimeLeft > 0)
+            return;
+
         switch (mStatus)
         {
             case FadeStatus.FadeIn:
@@ -106,7 +114,7 @@ public class SplashScreen : MonoBehaviour
 
     void OnGUI()
     {
-        if (true)
+        if (mDelayTimeLeft <= 0)
         {
             //绘制Logo
             if (SplashLogo != null)
@@ -150,7 +158,10 @@ public class SplashScreen : MonoBehaviour
                 {
                     Debug.LogWarning("LoadLevelThenFadeOut");
                     mCam.depth = -1000;
-                    SceneManager.LoadScene(LevelToLoad);
+                    if (LevelToLoad != "")
+                        SceneManager.LoadScene(LevelToLoad);
+                    else
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     //StartCoroutine(LoadSence());
                 }
             }

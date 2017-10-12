@@ -31,8 +31,6 @@ public abstract class ValueTransitionManager : TransitionManager
 
 	protected override void DoTransitionIn (bool instant, StateTypes prevStateType)
 	{
-        Debug.Log("ValueTM: TransitionIn(bool) " + instant + "," + prevStateType);
-
         if (instant) {
 			isTweeningProgress = false;
 			ProgressValue = 1;
