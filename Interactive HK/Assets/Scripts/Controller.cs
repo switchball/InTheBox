@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour {
 	public float moveSpeed = 3.0f;
 	public float gravity = 9.81f;
 
+    public bool 禁用左右移动 = false;
 	private CharacterController myController;
 
 	// Use this for initialization
@@ -24,6 +25,9 @@ public class Controller : MonoBehaviour {
 
 		// Determine how much should move in the x-direction
 		Vector3 movementX = Input.GetAxis("Horizontal") * Vector3.right * moveSpeed * Time.deltaTime;
+
+        if (禁用左右移动)
+            movementX = Vector3.zero;
 
 		// Convert combined Vector3 from local space to world space based on the position of the current gameobject (player)
 		Vector3 movement = transform.TransformDirection(movementZ+movementX);
