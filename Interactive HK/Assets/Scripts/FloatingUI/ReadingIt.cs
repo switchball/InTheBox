@@ -9,6 +9,7 @@ public class ReadingIt : MonoBehaviour {
     [Header("然后右击选择->Init，可自动完成部分设置")]
     public Canvas canvas;
     public Image image;
+    public Text text;
 
     public Sprite 墙上的图片;
     public Sprite[] 浮现的图片2张;
@@ -29,6 +30,7 @@ public class ReadingIt : MonoBehaviour {
     {
         canvas = GameObject.FindGameObjectWithTag("OverlayCanvas").GetComponent<Canvas>();
         image = canvas.transform.Find("Panel/Image").GetComponent<Image>();
+        text = canvas.transform.Find("Text").GetComponent<Text>();
         墙上的图片 = gameObject.GetComponent<SpriteRenderer>().sprite;
         if (浮现的图片2张 == null || 浮现的图片2张.Length == 0)
         {
@@ -120,6 +122,9 @@ public class ReadingIt : MonoBehaviour {
         StartCoroutine(DelayedReading(0.2f, false));
         render.sprite = 墙上的图片;
         //isReading = false;
+
+        // Transition
+        text.GetComponent<TransitionCommand>().Execute();
     }
 
     public bool GetReadingStatus()

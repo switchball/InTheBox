@@ -305,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66803861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5628195, y: -3.9, z: -5.8128996}
+  m_LocalPosition: {x: -6.5628195, y: -4.7, z: -5.8128996}
   m_LocalScale: {x: 8, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
@@ -411,6 +411,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespondDistance: 0
   transitionManager: {fileID: 0}
+  whatToRead: {fileID: 0}
+  "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
 --- !u!1 &243784475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1341,7 @@ GameObject:
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &954228541
 Animator:
   serializedVersion: 3
@@ -1436,6 +1438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardDistance: 4
   visibleDistance: {x: 5, y: 10}
+  colorIn: {r: 1, g: 1, b: 1, a: 1}
+  colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &954228546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,6 +1466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespondDistance: 5
   transitionManager: {fileID: 950120239}
+  whatToRead: {fileID: 0}
+  "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
 --- !u!1 &1051742600
 GameObject:
   m_ObjectHideFlags: 0

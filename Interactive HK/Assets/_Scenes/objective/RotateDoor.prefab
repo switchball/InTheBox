@@ -172,5 +172,5 @@ MonoBehaviour:
   durationOut: 0.5
   easeIn: 3
   easeOut: 4
-  inEulerAngles: {x: 0, y: 135, z: 0}
-  outEulerAngles: {x: 0, y: 16, z: 0}
+  inEulerAngles: {x: 0, y: 0, z: 0}
+  outEulerAngles: {x: 0, y: 135, z: 0}
