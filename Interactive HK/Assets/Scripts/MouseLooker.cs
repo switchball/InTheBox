@@ -84,7 +84,7 @@ public class MouseLooker : MonoBehaviour {
     public void DisableMove()
     {
         m_DisableInputTimeLeft = 1000000;
-        LockCursor(false);
+        //LockCursor(false);
     }
 
     public void EnableMove()
