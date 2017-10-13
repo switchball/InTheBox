@@ -6,6 +6,8 @@ public class GateTrigger : MonoBehaviour {
 
     public ReadingIt[] readings;
     public TransitionManager transitionManager;
+    public float delayTranTime;
+    public bool TurnToTarget = false;
 
     private bool mActivated = false;
 
@@ -27,9 +29,25 @@ public class GateTrigger : MonoBehaviour {
         if (a && !mActivated)
             if (transitionManager)
             {
-                transitionManager.TransitionIn();
+                //transitionManager.TransitionIn();
+                StartCoroutine(T());
                 mActivated = true;
             }
 
+    }
+
+    IEnumerator T()
+    {
+        yield return new WaitForSeconds(delayTranTime);
+        transitionManager.TransitionIn();
+        TurnCamera();
+    }
+
+
+    private void TurnCamera()
+    {
+        var locker = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseLooker>();
+        if (locker)
+            locker.LookAt(transitionManager.gameObject.transform.position, 1.5f, 2.0f);
     }
 }

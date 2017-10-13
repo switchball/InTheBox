@@ -52,8 +52,6 @@ public abstract class ValueTransitionManager : TransitionManager
 
 	protected override void DoTransitionOut (bool instant, StateTypes prevStateType)
 	{
-        Debug.Log("ValueTM: TransitionOut(bool) " + instant + "," + prevStateType);
-
         if (instant) {
 			isTweeningProgress = false;
 			ProgressValue = 0;
