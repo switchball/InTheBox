@@ -26,6 +26,8 @@ public class RespondToAction : MonoBehaviour {
             Debug.LogWarning("需要设置响应操作时玩家距离物体的最大范围，自动重置为5");
             RespondDistance = 5;
         }
+        if (whatToRead == null)
+            Debug.LogError("动画UI没有设置Reading的对象");
     }
 
     // Update is called once per frame

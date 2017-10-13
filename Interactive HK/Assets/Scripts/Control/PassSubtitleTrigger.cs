@@ -85,7 +85,7 @@ public class PassSubtitleTrigger : MonoBehaviour {
 
     private void TurnCamera()
     {
-        locker.LookAt(posSubtitle, 1.5f, 2.0f);
+        locker.LookAt(posSubtitle, 视角移动速度, 锁定操作时间);
     }
     
 }
