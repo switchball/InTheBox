@@ -78,8 +78,8 @@ public class SplashScreen : MonoBehaviour
         //如果是渐出后加载关卡则保留相机
         if (Type == SplashType.LoadLevelThenFadeOut)
         {
-            DontDestroyOnLoad(this);
-            DontDestroyOnLoad(Camera.main);
+            //DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(Camera.main);
         }
         //检查目标关卡是否为空
         if ((Application.levelCount <= 1) || (LevelToLoad == ""))
@@ -231,7 +231,7 @@ public class SplashScreen : MonoBehaviour
         flag = false;
     }
 
-    public void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {

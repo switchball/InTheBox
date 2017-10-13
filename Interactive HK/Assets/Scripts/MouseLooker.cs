@@ -24,6 +24,7 @@ public class MouseLooker : MonoBehaviour {
 	void Start() {
 		// start the game with the cursor locked
 		LockCursor (true);
+        StartCoroutine(L());
 
 		// get a reference to the character's transform (which this script should be attached to)
 		character = gameObject.transform;
@@ -38,8 +39,14 @@ public class MouseLooker : MonoBehaviour {
         // set smooth time
         m_SmoothTime = smoothTime;
 	}
-	
-	void Update() {
+
+    IEnumerator L()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LockCursor(true);
+    }
+
+    void Update() {
         // whether disable input
         if (m_DisableInputTimeLeft > 0)
         {

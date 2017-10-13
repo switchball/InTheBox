@@ -7731,6 +7731,106 @@ Transform:
   m_PrefabParentObject: {fileID: 4950391285051280, guid: 2dae627eda50ce248a562992e5617086,
     type: 2}
   m_PrefabInternal: {fileID: 1399031258}
+--- !u!1 &1411223953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1411223957}
+  - component: {fileID: 1411223956}
+  - component: {fileID: 1411223955}
+  - component: {fileID: 1411223954}
+  m_Layer: 0
+  m_Name: ScreenFadeControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1411223954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411223953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19935cd7ec830f64b8b6e4e8f700e1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionManager: {fileID: 1411223956}
+  transitionInStarted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  transitionInCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  transitionOutStarted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  transitionOutCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1411223955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411223953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaa7c52c4c38d449a19912a40a80a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeOnAwake: 1
+  transition: {fileID: 1411223956}
+  transitionType: 1
+  inAndOutWaitTime: 0
+  waitTransitionComplete: 1
+--- !u!114 &1411223956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411223953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650c3f4d0ab629f448360168cd368ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outWhenAwake: 0
+  autoActivate: 1
+  delayIn: 0
+  delayOut: 0
+  ignoreTimeScale: 0
+  durationIn: 0
+  durationOut: 4
+  easeIn: 21
+  easeOut: 1
+  color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &1411223957
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411223953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.453785, y: -5.0290565, z: 3.200963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1413309409
 GameObject:
   m_ObjectHideFlags: 0
