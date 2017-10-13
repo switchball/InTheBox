@@ -1371,7 +1371,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21927.395, y: 21927.395, z: 0}
+  Offset: {x: 21975.416, y: 21975.416, z: 0}
 --- !u!108 &213996264
 Light:
   m_ObjectHideFlags: 0
@@ -2080,7 +2080,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21577.748, y: 21577.748, z: 0}
+  Offset: {x: 21630.594, y: 21630.594, z: 0}
 --- !u!108 &292314682
 Light:
   m_ObjectHideFlags: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21945.566, y: 21945.566, z: 0}
+  Offset: {x: 21993.928, y: 21993.928, z: 0}
 --- !u!108 &310926581
 Light:
   m_ObjectHideFlags: 0
@@ -2651,6 +2651,77 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e48690596255ced4b9c842d25add2a50, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &362132936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 362132937}
+  - component: {fileID: 362132938}
+  m_Layer: 0
+  m_Name: "\u7687\u540E\u5927\u9053\u4E1C"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362132937
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362132936}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.11, y: 0.48227152, z: -0.02296477}
+  m_LocalScale: {x: 3.3938375, y: 2.840331, z: 2.840331}
+  m_Children: []
+  m_Father: {fileID: 581409109}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &362132938
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362132936}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5729649a74b98dd499366f4459f4f02d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.36, y: 2.23}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &373978355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,7 +3494,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21577.252, y: 21577.252, z: 0}
+  Offset: {x: 21630.098, y: 21630.098, z: 0}
 --- !u!108 &500671775
 Light:
   m_ObjectHideFlags: 0
@@ -3719,6 +3790,73 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537409062}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &581409108
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 53.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -450
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -270.148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.36442122
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4354375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.4354375
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6bcbcfd29f5e90146b3785612c14ebea, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &581409109 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4959290870991172, guid: 6bcbcfd29f5e90146b3785612c14ebea,
+    type: 2}
+  m_PrefabInternal: {fileID: 581409108}
 --- !u!1 &582787469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4008,7 +4146,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21930.371, y: 21930.371, z: 0}
+  Offset: {x: 21978.264, y: 21978.264, z: 0}
 --- !u!108 &624229733
 Light:
   m_ObjectHideFlags: 0
@@ -4211,7 +4349,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21934.246, y: 21934.246, z: 0}
+  Offset: {x: 21982.19, y: 21982.19, z: 0}
 --- !u!108 &634191827
 Light:
   m_ObjectHideFlags: 0
@@ -6199,7 +6337,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 19028.51, y: 19028.51, z: 0}
+  Offset: {x: 19081.355, y: 19081.355, z: 0}
 --- !u!108 &1087685535
 Light:
   m_ObjectHideFlags: 0
@@ -6876,7 +7014,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21583.771, y: 21583.771, z: 0}
+  Offset: {x: 21636.617, y: 21636.617, z: 0}
 --- !u!108 &1195753781
 Light:
   m_ObjectHideFlags: 0
@@ -7156,6 +7294,138 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e8708f564f769e4a8f4ba038ed73b0d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1260762333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1260762334}
+  - component: {fileID: 1260762336}
+  - component: {fileID: 1260762335}
+  m_Layer: 0
+  m_Name: Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260762334
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260762333}
+  m_LocalRotation: {x: 0.94785595, y: -0, z: -0, w: 0.31869912}
+  m_LocalPosition: {x: -0.03, y: 10.05, z: 9.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 581409109}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 142.831, y: -0.000015258789, z: -0.000015258789}
+--- !u!114 &1260762335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260762333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da396d4547fa3ff45a6bc1e4f6ca6964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseTexture3D: {fileID: 0}
+  NoiseScale: {x: 0.5, y: 0.5, z: 0.5}
+  NoiseVelocity: {x: 1, y: 1, z: 0}
+  LightFalloff: {fileID: 0}
+  NearPlane: 0
+  NoiseEnabled: 0
+  CustomMieScatter: 0
+  CustomExtinction: 0
+  CustomExtinctionEffect: 0
+  CustomDensity: 0
+  CustomSampleCount: 0
+  CustomColor: 0
+  CustomNoiseEnabled: 0
+  CustomNoiseTexture: 0
+  CustomNoiseScale: 0
+  CustomNoiseVelocity: 0
+  CustomNoiseContrast: 0
+  CustomFogHeightEnabled: 0
+  CustomFogHeight: 0
+  CustomFogTransitionSize: 0
+  CustomAboveFogPercent: 0
+  CustomSunSize: 0
+  CustomSunBleed: 0
+  ShadowCasting: 1
+  CustomStrength: 0
+  CustomIntensity: 0
+  CustomTintMode: 0
+  CustomTintColor: 0
+  CustomTintColor2: 0
+  CustomTintGradient: 0
+  CustomTintIntensity: 0
+  CustomMaxLightDistance: 0
+  NoiseContrast: 1
+  TintMode: 0
+  TintColor: {r: 1, g: 0, b: 0, a: 1}
+  TintColor2: {r: 0, g: 0, b: 1, a: 1}
+  TintIntensity: 0.2
+  TintGradient: 0.2
+  Intensity: 1
+  Strength: 1
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  MieScattering: 0.05
+  SunSize: 0
+  SunBleed: 1
+  Extinction: 0.01
+  Density: 0.2
+  ExtraDensity: 0
+  SampleCount: 4
+  Shadows: 1
+  FogHeightEnabled: 0
+  FogHeight: 5
+  FogTransitionSize: 5
+  MaxLightDistance: 128
+  AboveFogPercent: 0.1
+  Offset: {x: 61.599052, y: 61.599052, z: 0}
+--- !u!108 &1260762336
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260762333}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.849824, g: 0.8602941, b: 0.7843858, a: 1}
+  m_Intensity: 4.24
+  m_Range: 14.97
+  m_SpotAngle: 68.7
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1261845050
 GameObject:
   m_ObjectHideFlags: 0
@@ -7238,7 +7508,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21926.162, y: 21926.162, z: 0}
+  Offset: {x: 21944.672, y: 21944.672, z: 0}
 --- !u!108 &1261845052
 Light:
   m_ObjectHideFlags: 0
@@ -8277,7 +8547,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21583.852, y: 21583.852, z: 0}
+  Offset: {x: 21636.697, y: 21636.697, z: 0}
 --- !u!108 &1506488822
 Light:
   m_ObjectHideFlags: 0
@@ -8409,7 +8679,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21767.674, y: 21767.674, z: 0}
+  Offset: {x: 21820.52, y: 21820.52, z: 0}
 --- !u!108 &1542085567
 Light:
   m_ObjectHideFlags: 0
@@ -8802,7 +9072,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 22033.54, y: 22033.54, z: 0}
+  Offset: {x: 22052.049, y: 22052.049, z: 0}
 --- !u!108 &1599644274
 Light:
   m_ObjectHideFlags: 0
@@ -9143,7 +9413,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21934.682, y: 21934.682, z: 0}
+  Offset: {x: 21982.703, y: 21982.703, z: 0}
 --- !u!108 &1658961653
 Light:
   m_ObjectHideFlags: 0
@@ -9552,7 +9822,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21773.99, y: 21773.99, z: 0}
+  Offset: {x: 21826.836, y: 21826.836, z: 0}
 --- !u!108 &1781398153
 Light:
   m_ObjectHideFlags: 0
@@ -10237,10 +10507,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -0.7951784
-    e01: 0.000000001481135
-    e02: -0.0000000695167
-    e03: 32.045692
+    e00: -0.9982026
+    e01: 0.000000001859297
+    e02: -0.00000008726565
+    e03: 40.22757
     e10: -0.0000000032261955
     e11: -1.7320508
     e12: -4.1672655e-17
@@ -10248,16 +10518,16 @@ MonoBehaviour:
     e20: -2.6231186e-11
     e21: 4.1640272e-20
     e22: 0.00030004978
-    e23: 0.28724188
+    e23: 0.28829807
     e30: 0.00000008742278
     e31: -1.3877788e-16
     e32: -1
-    e33: 42.819996
+    e33: 39.299995
   LastMatrixVP:
-    e00: -0.7951784
-    e01: 0.000000001481135
-    e02: -0.0000000695167
-    e03: 32.045692
+    e00: -0.9982026
+    e01: 0.000000001859297
+    e02: -0.00000008726565
+    e03: 40.22757
     e10: 0.0000000032261955
     e11: 1.7320508
     e12: 4.1672655e-17
@@ -10265,11 +10535,11 @@ MonoBehaviour:
     e20: -2.6231186e-11
     e21: 4.1640272e-20
     e22: 0.00030004978
-    e23: 0.28724188
+    e23: 0.28829807
     e30: 0.00000008742278
     e31: -1.3877788e-16
     e32: -1
-    e33: 42.819996
+    e33: 39.299995
   LastMatrixVPInv:
     e00: 0
     e01: 0
@@ -10333,7 +10603,7 @@ MonoBehaviour:
     e20: -0.00000008742278
     e21: 1.3877788e-16
     e22: 1
-    e23: -42.819996
+    e23: -39.299995
     e30: 0
     e31: 0
     e32: 0
@@ -10631,7 +10901,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 21928.992, y: 21928.992, z: 0}
+  Offset: {x: 21947.502, y: 21947.502, z: 0}
 --- !u!108 &1993766474
 Light:
   m_ObjectHideFlags: 0
