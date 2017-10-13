@@ -65,15 +65,20 @@ public class RespondToAction : MonoBehaviour {
             if (whatToRead) {
                 if (whatToRead.GetReadingStatus() == false)
                     whatToRead.StartReading();
+                //Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
+
             } else {
-                Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
-                if (transitionManager)
-                    transitionManager.TransitionIn();
-                if (点击一次后消失)
-                    StartCoroutine(LateDisable());
             }
+            if (点击一次后消失)
+                StartCoroutine(LateDisable());
         }
 
+    }
+
+    public void StartTransition()
+    {
+        if (transitionManager)
+            transitionManager.TransitionIn();
     }
 
     IEnumerator LateDisable()

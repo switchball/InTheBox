@@ -36,7 +36,8 @@ public class ArriveTrigger : MonoBehaviour {
 
     public void OnTriggerEnter(Collider coll)
     {
-        transitionManager.TransitionIn();
+        if (transitionManager)
+            transitionManager.TransitionIn();
         // 如果目标不在视野内，且强制移动视角开启
         if (onArrive != null)
             onArrive.Invoke();

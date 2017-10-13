@@ -53,6 +53,8 @@ public class SplashScreen : MonoBehaviour
     //关卡是否加载完毕
     private bool LevelisLoaded = false;
 
+    private bool flag = true;
+
     void Start()
     {
         mDelayTimeLeft = DelayTime;
@@ -89,6 +91,9 @@ public class SplashScreen : MonoBehaviour
 
     void Update()
     {
+        if (flag)
+            return;
+
         mDelayTimeLeft -= Time.deltaTime;
         if (mDelayTimeLeft > 0)
             return;
@@ -114,6 +119,9 @@ public class SplashScreen : MonoBehaviour
 
     void OnGUI()
     {
+        if (flag)
+            return;
+
         if (mDelayTimeLeft <= 0)
         {
             //绘制Logo
@@ -216,5 +224,18 @@ public class SplashScreen : MonoBehaviour
     public void SetModeID(int mode)
     {
         modeID = mode - 1;
+    }
+
+    public void StartSplash()
+    {
+        flag = false;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartSplash();
+        }
     }
 }

@@ -11,15 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Main.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/_Scenes/_TitleScene.unity
-    guid: f3184da365feb504c8107fd698bbd59f
-  - enabled: 0
-    path: Assets/_Scenes/Mainland 222.unity
-    guid: 16fb1cef07537c04483921906dc70e22
   - enabled: 0
     path: Assets/_Scenes/S_2.unity
     guid: 0811bbfc4f988a44b933fb7d54308257
+  - enabled: 0
+    path: Assets/_Scenes/mainland_2.unity
+    guid: c598e1e1e2b33d14d870ebd8c24f15ac
+  - enabled: 1
+    path: Assets/_Scenes/_TitleScene.unity
+    guid: f3184da365feb504c8107fd698bbd59f
   - enabled: 1
     path: Assets/_Scenes/corridor.unity
     guid: 18a07449abc1269498874489849e55c0
@@ -27,5 +27,17 @@ EditorBuildSettings:
     path: Assets/_Scenes/hk_1_1.unity
     guid: 51ca2a465bd273645ab44582329ce06f
   - enabled: 1
-    path: Assets/_Scenes/mainland_2.unity
-    guid: c598e1e1e2b33d14d870ebd8c24f15ac
+    path: Assets/_Scenes/Mainland 222.unity
+    guid: 16fb1cef07537c04483921906dc70e22
+  - enabled: 1
+    path: Assets/_Scenes/hk_2.unity
+    guid: d29faba63cb83984f9165dd33041c8ed
+  - enabled: 1
+    path: Assets/_Scenes/Mainland 224.unity
+    guid: 095522df7af51ee479f9b673c18dbaf2
+  - enabled: 1
+    path: Assets/_Scenes/hk_3.unity
+    guid: ee60089257d05624a912d6547d0c0087
+  - enabled: 1
+    path: Assets/_Scenes/Mainland last.unity
+    guid: bd577417ee841ce4aab706c5dd1a4756

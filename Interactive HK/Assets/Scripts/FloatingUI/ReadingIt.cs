@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class ReadingIt : MonoBehaviour {
@@ -17,6 +19,8 @@ public class ReadingIt : MonoBehaviour {
     public Sprite[] 浮现的图片2张;
     public float lastTimeAtLeast = 0.5f;
 
+    public UnityEvent onFinished;
+
     private SpriteRenderer render;
 
     private GameObject player;
@@ -26,6 +30,8 @@ public class ReadingIt : MonoBehaviour {
     private int spriteIndex;
     private bool isReading = false;
     private float mTimeLeft;
+
+    private bool mHasRead = false;
 
     [ContextMenu("Init")]
     private void Awake()
@@ -112,6 +118,7 @@ public class ReadingIt : MonoBehaviour {
     public void FinishReading()
     {
         Debug.LogWarning("EndReading");
+        mHasRead = true;
 
         // Enable Mouse Move
         if (looker)
@@ -131,10 +138,17 @@ public class ReadingIt : MonoBehaviour {
 
         // Transition
         cornerText.GetComponent<TransitionCommand>().Execute();
+
+        onFinished.Invoke();
     }
 
     public bool GetReadingStatus()
     {
         return isReading;
+    }
+
+    public bool HasRead()
+    {
+        return mHasRead;
     }
 }
