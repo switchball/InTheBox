@@ -484,6 +484,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: b8fbb37466ee49d4cbbfee3f67eb6302, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -1253,6 +1254,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c5490d747102a1645adb07938827650f, type: 3}
   m_PrefabInternal: {fileID: 362825279}
+--- !u!1 &362825281 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: c5490d747102a1645adb07938827650f, type: 3}
+  m_PrefabInternal: {fileID: 362825279}
+--- !u!65 &362825282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362825281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.943787, y: 6.261578, z: 0.30000007}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &364426131
 Prefab:
   m_ObjectHideFlags: 0
@@ -1794,6 +1811,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -2721,6 +2739,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -3094,7 +3113,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 712586438}
-  m_LocalRotation: {x: 0.65371925, y: -0.60605407, z: 0.29325107, w: 0.34547594}
+  m_LocalRotation: {x: 0.6537192, y: -0.606054, z: 0.29325104, w: 0.3454759}
   m_LocalPosition: {x: 0.2, y: 10.7, z: 7.8}
   m_LocalScale: {x: 0.8890703, y: 0.88907033, z: 0.8890704}
   m_Children: []
@@ -3865,22 +3884,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 409.5
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 799
+      value: 1004
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 748
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -3932,22 +3951,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 409.5
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 799
+      value: 1004
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 748
       objectReference: {fileID: 0}
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4623,6 +4642,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 7a2b88e9bda00a046a7be4ba6ab022c9, type: 3}
   m_PrefabInternal: {fileID: 1062547585}
+--- !u!1 &1062547587 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 7a2b88e9bda00a046a7be4ba6ab022c9, type: 3}
+  m_PrefabInternal: {fileID: 1062547585}
+--- !u!65 &1062547588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062547587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.667171, y: 31.924332, z: 12.66717}
+  m_Center: {x: -15.516888, y: 15.962166, z: 0}
 --- !u!1 &1078006499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6133,6 +6168,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c5490d747102a1645adb07938827650f, type: 3}
   m_PrefabInternal: {fileID: 1294515888}
+--- !u!1 &1294515890 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: c5490d747102a1645adb07938827650f, type: 3}
+  m_PrefabInternal: {fileID: 1294515888}
+--- !u!65 &1294515891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294515890}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.943787, y: 6.261578, z: 0.30000007}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1309623347
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,6 +6277,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -8041,6 +8093,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 9e6f84c4b3f9a1c42a671a78b37bdbcd, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -9165,6 +9218,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -9409,6 +9463,7 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 5e53f9687a9d26f42baddd5c10d5c542, type: 3}
   lastTimeAtLeast: 0.5
+  "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
     m_PersistentCalls:
       m_Calls:
