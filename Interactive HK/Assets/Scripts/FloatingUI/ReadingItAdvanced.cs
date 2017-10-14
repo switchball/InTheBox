@@ -6,24 +6,24 @@ using UnityEngine.Events;
 
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class ReadingIt : MonoBehaviour {
+public class ReadingItAdvanced : ReadingIt {
     [Header("使用方法：拖到带有图片的组件上")]
     [Header("然后右击选择->Init，可自动完成部分设置")]
-    public Canvas canvas;
-    public Image panelImage;
+    //public Canvas canvas;
+    //public Image panelImage;
     private TransitionManager panelImageTrans;
     private Image imageR2;
     private Image imageL1;
-    public Text centerText;
-    public Text cornerText;
+    //public Text centerText;
+    //public Text cornerText;
 
-    public Sprite 墙上的图片;
-    public Sprite[] 浮现的图片2张;
-    public float lastTimeAtLeast = 0.5f;
-    public string 右下角字 = "";
+    //public Sprite 墙上的图片;
+    //public Sprite[] 浮现的图片2张;
+    //public float lastTimeAtLeast = 0.5f;
+    //public string 右下角字 = "";
 
-    public UnityEvent onFinished;
-
+    //public UnityEvent onFinished;
+    
     private CommandBehavior command;
     private SpriteRenderer render;
 
@@ -37,12 +37,10 @@ public class ReadingIt : MonoBehaviour {
 
     private bool mHasRead = false;
 
-    public string canvasName = "OverlayCanvas";
-
     [ContextMenu("Init")]
     private void Awake()
     {
-        canvas = GameObject.FindGameObjectWithTag(canvasName).GetComponent<Canvas>();
+        canvas = GameObject.FindGameObjectWithTag("OverlayCanvasAdvanced").GetComponent<Canvas>();
         panelImage = canvas.transform.Find("PanelDumb").GetComponent<Image>();
         panelImageTrans = canvas.transform.Find("PanelDumb").GetComponent<TransitionManager>();
         imageR2 = canvas.transform.Find("PanelR/Image").GetComponent<Image>();
@@ -66,6 +64,10 @@ public class ReadingIt : MonoBehaviour {
 
         // 不显示图片
         render.sprite = null;
+
+        panelImageTrans = canvas.transform.Find("PanelDumb").GetComponent<TransitionManager>();
+        imageR2 = canvas.transform.Find("PanelR/Image").GetComponent<Image>();
+        imageL1 = canvas.transform.Find("PanelL/Image").GetComponent<Image>();
     }
 	
 	// Update is called once per frame
@@ -84,7 +86,7 @@ public class ReadingIt : MonoBehaviour {
         }
 	}
 
-    public void StartReading()
+    public new void StartReading()
     {
         spriteIndex = 0;
         Debug.LogWarning("StartReading");
@@ -110,11 +112,13 @@ public class ReadingIt : MonoBehaviour {
         }
     }
 
-    public void NextReading()
+    public new void NextReading()
     {
         // Replace Image R
         if (spriteIndex < 浮现的图片2张.Length)
         {
+            imageR2 = canvas.transform.Find("PanelR/Image").GetComponent<Image>();
+
             imageR2.enabled = true;
             imageR2.sprite = 浮现的图片2张[spriteIndex];
         } else
@@ -151,7 +155,7 @@ public class ReadingIt : MonoBehaviour {
         spriteIndex++;
     }
 
-    public void FinishReading()
+    public new void FinishReading()
     {
         Debug.LogWarning("EndReading");
         mHasRead = true;
@@ -181,13 +185,4 @@ public class ReadingIt : MonoBehaviour {
         //onFinished.Invoke();
     }
 
-    public bool GetReadingStatus()
-    {
-        return isReading;
-    }
-
-    public bool HasRead()
-    {
-        return mHasRead;
-    }
 }

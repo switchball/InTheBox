@@ -238,4 +238,12 @@ public class SplashScreen : MonoBehaviour
             StartSplash();
         }
     }
+
+    public void JumpNextScene()
+    {
+        if (LevelToLoad != "")
+            SceneManager.LoadScene(LevelToLoad);
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
