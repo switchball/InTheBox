@@ -40,7 +40,8 @@ public class GateTrigger : MonoBehaviour {
     {
         yield return new WaitForSeconds(delayTranTime);
         transitionManager.TransitionIn();
-        TurnCamera();
+        if (TurnToTarget)
+            TurnCamera();
     }
 
 
