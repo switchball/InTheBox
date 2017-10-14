@@ -88,7 +88,7 @@ public class RespondToAction : MonoBehaviour {
 
         yield return new WaitForSeconds(0.5f);
 
-        gameObject.SetActive(false);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
         //Do Function here...
     }
 

@@ -213,7 +213,7 @@ MonoBehaviour:
   outWhenAwake: 1
   autoActivate: 0
   delayIn: 0
-  delayOut: 0
+  delayOut: 1.2
   ignoreTimeScale: 0
   durationIn: 0.8
   durationOut: 0.8
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outWhenAwake: 1
   autoActivate: 0
-  delayIn: 0
+  delayIn: 0.5
   delayOut: 0
   ignoreTimeScale: 0
   durationIn: 1.5
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outWhenAwake: 1
   autoActivate: 0
-  delayIn: 0
+  delayIn: 0.5
   delayOut: 0
   ignoreTimeScale: 0
   durationIn: 1.5
