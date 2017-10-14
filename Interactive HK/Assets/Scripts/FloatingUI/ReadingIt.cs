@@ -11,7 +11,9 @@ public class ReadingIt : MonoBehaviour {
     [Header("然后右击选择->Init，可自动完成部分设置")]
     public Canvas canvas;
     public Image panelImage;
-    public Image image;
+    private TransitionManager panelImageTrans;
+    private Image imageR2;
+    private Image imageL1;
     public Text centerText;
     public Text cornerText;
 
@@ -21,6 +23,7 @@ public class ReadingIt : MonoBehaviour {
 
     public UnityEvent onFinished;
 
+    private CommandBehavior command;
     private SpriteRenderer render;
 
     private GameObject player;
@@ -37,10 +40,13 @@ public class ReadingIt : MonoBehaviour {
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("OverlayCanvas").GetComponent<Canvas>();
-        panelImage = canvas.transform.Find("Panel").GetComponent<Image>();
-        image = canvas.transform.Find("Panel/Image").GetComponent<Image>();
+        panelImage = canvas.transform.Find("PanelDumb").GetComponent<Image>();
+        panelImageTrans = canvas.transform.Find("PanelDumb").GetComponent<TransitionManager>();
+        imageR2 = canvas.transform.Find("PanelR/Image").GetComponent<Image>();
+        imageL1 = canvas.transform.Find("PanelL/Image").GetComponent<Image>();
         centerText = canvas.transform.Find("CenterText").GetComponent<Text>();
         cornerText = canvas.transform.Find("CornerText").GetComponent<Text>();
+        command = panelImage.gameObject.GetComponent<CommandBehavior>();
         墙上的图片 = gameObject.GetComponent<SpriteRenderer>().sprite;
         if (浮现的图片2张 == null || 浮现的图片2张.Length == 0)
         {
@@ -94,23 +100,50 @@ public class ReadingIt : MonoBehaviour {
     {
         yield return new WaitForSeconds(sec);
         isReading = s;
+        if (!s)
+        {
+            onFinished.Invoke();
+            cornerText.GetComponent<TransitionCommand>().Execute();
+        }
     }
 
     public void NextReading()
     {
+        // Replace Image R
+        if (spriteIndex < 浮现的图片2张.Length)
+        {
+            imageR2.enabled = true;
+            imageR2.sprite = 浮现的图片2张[spriteIndex];
+        } else
+        {
+            imageR2.enabled = false;
+            imageR2.sprite = null;
+        }
+        // Replace Image L
+        if (spriteIndex > 0 && spriteIndex <= 浮现的图片2张.Length)
+        {
+            imageL1.enabled = true;
+            imageL1.sprite = 浮现的图片2张[spriteIndex-1];
+        } else
+        {
+            imageL1.enabled = false;
+            imageL1.sprite = null;
+        }
+
+        command.Execute();
+
+        panelImageTrans.TransitionIn();
+        //panelImage.enabled = true;
+
+        isReading = true;
+        mTimeLeft = lastTimeAtLeast;
+
+
         if (spriteIndex >= 浮现的图片2张.Length)
         {
             FinishReading();
             return;
         }
-        // Replace Image
-        image.sprite = 浮现的图片2张[spriteIndex];
-        panelImage.enabled = true;
-        image.enabled = true;
-
-        isReading = true;
-        mTimeLeft = lastTimeAtLeast;
-
         // add sprite index
         spriteIndex++;
     }
@@ -129,17 +162,19 @@ public class ReadingIt : MonoBehaviour {
             control.enabled = true;
 
         // Disable Image
-        panelImage.enabled = false;
-        image.enabled = false;
+        panelImageTrans.TransitionOut();
+        //panelImage.enabled = false;
 
-        StartCoroutine(DelayedReading(0.2f, false));
+        StartCoroutine(DelayedReading(lastTimeAtLeast, false));
         render.sprite = 墙上的图片;
         //isReading = false;
 
+        // moved to DelayedReading(?, false)
         // Transition
-        cornerText.GetComponent<TransitionCommand>().Execute();
+        // cornerText.GetComponent<TransitionCommand>().Execute();
 
-        onFinished.Invoke();
+        // moved to DelayedReading(?, false)
+        //onFinished.Invoke();
     }
 
     public bool GetReadingStatus()

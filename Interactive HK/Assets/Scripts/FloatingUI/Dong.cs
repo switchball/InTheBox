@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
 public class Dong : MonoBehaviour {
@@ -10,6 +11,9 @@ public class Dong : MonoBehaviour {
 
     public float waitTime;
     public string textShown;
+    public bool hideRenderWhenPlay = true;
+
+    public UnityEvent onTrigger;
 
     private bool flag;
 
@@ -17,7 +21,7 @@ public class Dong : MonoBehaviour {
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("OverlayCanvas").GetComponent<Canvas>();
-        text = blackScreen.transform.Find("CenterText").GetComponent<Text>();
+        text = canvas.transform.Find("CenterText").GetComponent<Text>();
 
         if (waitTime == 0)
             waitTime = 3;
@@ -28,7 +32,13 @@ public class Dong : MonoBehaviour {
 
     void Start () {
         flag = false;
-	}
+        var ren = gameObject.GetComponent<Renderer>();
+        if (hideRenderWhenPlay)
+        {
+            if (ren != null)
+                ren.enabled = false;
+        }
+    }
 
     private void OnEnable()
     {
@@ -42,8 +52,15 @@ public class Dong : MonoBehaviour {
             if (!flag)
             {
                 flag = true;
-                text.GetComponent<TransitionManager>().TransitionIn();
+                text.text = textShown.Replace("|", "\n");
+                var tm = text.GetComponent<TransitionCommand>();
+                if (tm)
+                {
+                    tm.inAndOutWaitTime = waitTime;
+                    tm.Execute();
+                }
                 // add event
+                onTrigger.Invoke();
             }
         }
     }

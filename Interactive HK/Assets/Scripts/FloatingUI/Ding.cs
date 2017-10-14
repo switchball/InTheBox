@@ -12,6 +12,7 @@ public class Ding : MonoBehaviour {
 
     public float waitTime;
     public string textShown;
+    public bool hideRenderWhenPlay = true;
 
     private AudioSource audioSource;
     private bool flag;
@@ -33,6 +34,12 @@ public class Ding : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
         flag = false;
+        var ren = gameObject.GetComponent<Renderer>();
+        if (hideRenderWhenPlay)
+        {
+            if (ren != null)
+                ren.enabled = false;
+        }
     }
 
     private void OnEnable()
