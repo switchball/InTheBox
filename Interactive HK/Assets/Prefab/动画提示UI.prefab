@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardDistance: 3
-  visibleDistance: {x: 8, y: 10}
+  visibleDistance: {x: 9, y: 9.5}
   colorIn: {r: 1, g: 1, b: 1, a: 1}
   colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &114844073043301006
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a6aa7f125ce164088f76768006aebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RespondDistance: 8
+  RespondDistance: 9.5
   transitionManager: {fileID: 0}
   whatToRead: {fileID: 0}
   "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
