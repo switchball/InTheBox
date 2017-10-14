@@ -20,6 +20,7 @@ public class ReadingIt : MonoBehaviour {
     public Sprite 墙上的图片;
     public Sprite[] 浮现的图片2张;
     public float lastTimeAtLeast = 0.5f;
+    public string 右下角字 = "";
 
     public UnityEvent onFinished;
 
@@ -167,6 +168,7 @@ public class ReadingIt : MonoBehaviour {
 
         StartCoroutine(DelayedReading(lastTimeAtLeast, false));
         render.sprite = 墙上的图片;
+        cornerText.text = 右下角字.Replace("|", "\n");
         //isReading = false;
 
         // moved to DelayedReading(?, false)
