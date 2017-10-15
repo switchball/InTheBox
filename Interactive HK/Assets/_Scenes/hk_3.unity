@@ -1757,10 +1757,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -1.2359061
-    e01: 0.0000000023020545
-    e02: -0.00000010804634
-    e03: 21.962055
+    e00: -1.2061194
+    e01: 0.0000000022465725
+    e02: -0.00000010544231
+    e03: 21.71015
     e10: -0.000000003994455
     e11: -2.1445067
     e12: -3.4920635e-16
@@ -1768,28 +1768,28 @@ MonoBehaviour:
     e20: -2.6231186e-11
     e21: 0
     e22: 0.00030004978
-    e23: 0.29680148
+    e23: 0.2982297
     e30: 0.00000008742278
     e31: 0
     e32: -1
-    e33: 10.959998
+    e33: 6.1999984
   LastMatrixVP:
-    e00: 0
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 0
-    e12: 0
-    e13: 0
-    e20: 0
+    e00: -1.2061194
+    e01: 0.0000000022465725
+    e02: -0.00000010544231
+    e03: 21.71015
+    e10: 0.000000003994455
+    e11: 2.1445067
+    e12: 3.4920635e-16
+    e13: -3.7957768
+    e20: -2.6231186e-11
     e21: 0
-    e22: 0
-    e23: 0
-    e30: 0
+    e22: 0.00030004978
+    e23: 0.2982297
+    e30: 0.00000008742278
     e31: 0
-    e32: 0
-    e33: 0
+    e32: -1
+    e33: 6.1999984
   LastMatrixVPInv:
     e00: 0
     e01: 0
@@ -1845,7 +1845,7 @@ MonoBehaviour:
     e00: -1
     e01: 0.0000000018626451
     e02: -0.00000008742278
-    e03: 17.770002
+    e03: 18
     e10: 0.0000000018626451
     e11: 1
     e12: 1.6283761e-16
@@ -1853,7 +1853,7 @@ MonoBehaviour:
     e20: -0.00000008742278
     e21: 0
     e22: 1
-    e23: -10.959998
+    e23: -6.1999984
     e30: 0
     e31: 0
     e32: 0
@@ -2779,7 +2779,7 @@ Prefab:
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 370.5
+      value: 404.5
       objectReference: {fileID: 0}
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
@@ -2789,7 +2789,7 @@ Prefab:
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 741
+      value: 809
       objectReference: {fileID: 0}
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
@@ -3483,6 +3483,10 @@ Prefab:
         type: 2}
       propertyPath: FadeSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194904281926450, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}
@@ -4887,7 +4891,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 77.269714, y: 77.269714, z: 0}
+  Offset: {x: 83.41622, y: 83.41622, z: 0}
 --- !u!108 &2000638588
 Light:
   m_ObjectHideFlags: 0
@@ -5080,7 +5084,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4f9233477521f434984e3c0c8f70083e, type: 2}
+  - {fileID: 2100000, guid: fc902460670d9f3488cbfdc8da1a9617, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5295,7 +5299,7 @@ MonoBehaviour:
   FogTransitionSize: 9.49
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 456.52734, y: 456.52734, z: 0}
+  Offset: {x: 462.67386, y: 462.67386, z: 0}
 --- !u!108 &2147034958
 Light:
   m_ObjectHideFlags: 0
