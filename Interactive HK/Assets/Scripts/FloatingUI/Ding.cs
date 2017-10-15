@@ -10,6 +10,7 @@ public class Ding : MonoBehaviour {
     public GameObject blackScreen;
     public Text text;
 
+    public float delayTime;
     public float waitTime;
     public string textShown;
     public bool hideRenderWhenPlay = true;
@@ -61,6 +62,7 @@ public class Ding : MonoBehaviour {
 
     IEnumerator DingCoroutine()
     {
+        yield return new WaitForSeconds(delayTime);
         text.text = textShown.Replace("|", "\n");
         blackScreen.SetActive(true);
         LockMove();
