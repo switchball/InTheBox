@@ -4117,22 +4117,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 375
+      value: 287
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -161.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 730
+      value: 554
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4147,22 +4147,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 375
+      value: 287
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -161.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 730
+      value: 554
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive
@@ -4202,6 +4202,37 @@ Prefab:
     - target: {fileID: 114991182909600418, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 87c316b602156405d92e616621658222,
+        type: 3}
+    - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 224402994336381480, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4729,7 +4760,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 767.25824, y: 767.25824, z: 0}
+  Offset: {x: 844.5344, y: 844.5344, z: 0}
 --- !u!108 &558586749
 Light:
   m_ObjectHideFlags: 0
@@ -7733,8 +7764,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 905321707}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 56.5, y: 0.27, z: 1.8}
-  m_LocalScale: {x: 12.921784, y: 3.5271778, z: 2.5104644}
+  m_LocalPosition: {x: 56.47, y: 0.27, z: 1.8}
+  m_LocalScale: {x: 12.921784, y: 3.5271778, z: 6.0029263}
   m_Children: []
   m_Father: {fileID: 423461423}
   m_RootOrder: 0
@@ -9821,7 +9852,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 756.0358, y: 756.0358, z: 0}
+  Offset: {x: 833.312, y: 833.312, z: 0}
 --- !u!108 &1181764966
 Light:
   m_ObjectHideFlags: 0
@@ -12398,10 +12429,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -0.00000011617746
+    e00: -0.000000116143056
     e01: 0
-    e02: -0.9745673
-    e03: 2.728787
+    e02: -0.9742787
+    e03: 2.7279787
     e10: 0
     e11: -1.7320508
     e12: 0
@@ -12415,10 +12446,10 @@ MonoBehaviour:
     e32: -0.00000011920929
     e33: 12.000002
   LastMatrixVP:
-    e00: -0.00000011617746
+    e00: -0.000000116143056
     e01: 0
-    e02: -0.9745673
-    e03: 2.728787
+    e02: -0.9742787
+    e03: 2.7279787
     e10: 0
     e11: 1.7320508
     e12: 0
@@ -14069,7 +14100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1568762728
 Transform:
   m_ObjectHideFlags: 0
@@ -18292,7 +18323,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 860.99176, y: 860.99176, z: 0}
+  Offset: {x: 938.26794, y: 938.26794, z: 0}
 --- !u!108 &2049365318
 Light:
   m_ObjectHideFlags: 0
@@ -19006,12 +19037,12 @@ Prefab:
     - target: {fileID: 114907501665784542, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.0039047687
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114907501665784542, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.5661765
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114907501665784542, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6,
         type: 2}
@@ -19147,7 +19178,7 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 0ede964075d28de4faa07eba5d1b5f6e,
+      objectReference: {fileID: 12800000, guid: 4444739d103d1394b80c7019923c4143,
         type: 3}
     - target: {fileID: 114569874916996974, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6,
         type: 2}
@@ -19255,6 +19286,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114631396458330780, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4444739d103d1394b80c7019923c4143,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e9f6d4f4cd1979478d9f1494fe35ee6, type: 2}
   m_IsPrefabParent: 0
