@@ -50,6 +50,12 @@ public class PassSubtitleTrigger : MonoBehaviour {
         // 如果目标不在视野内，且强制移动视角开启
         if (!IsInViewpoint() && 是否强制移动视角)
             TurnCamera();
+        if (!bPassed)
+        {
+            bPassed = true;
+            // Invoke FirstPass Event
+            onFirstPass.Invoke();
+        }
     }
 
     public void OnTriggerExit(Collider coll)

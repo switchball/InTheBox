@@ -66,16 +66,22 @@ public class MouseLooker : MonoBehaviour {
 
 		// if the player fires, then relock the cursor
 		if(Input.GetButtonDown("Fire2")){
-			LockCursor (true);
+			LockCursor (false);
 		}
-	}
+
+        // if the player fires, then relock the cursor
+        if (Input.GetButtonDown("Fire1"))
+        {
+            LockCursor(true);
+        }
+    }
 	
 	private void LockCursor(bool isLocked)
 	{
 		if (isLocked) 
 		{
 			// make the mouse pointer invisible
-			Cursor.visible = true;
+			Cursor.visible = false;
 
 			// lock the mouse pointer within the game area
 			Cursor.lockState = CursorLockMode.Locked;
