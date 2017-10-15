@@ -1,39 +1,47 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
 public class SceneJump : MonoBehaviour {
+    public UnityEvent onClick;
+    private Animator anim;
+    private bool flag;
 
-	public int sceneBuildIndex;
-	public float timeDelayed = 0;
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+        anim.Play("CubeClose0");
+    }
 
-	public bool setSmallFinish = false;
-	public bool setLargeFinish = false;
+    private void OnMouseDown()
+    {
+        if (!flag)
+        {
+            onClick.Invoke();
+            flag = true;
+        }
+    }
 
-	public List<GameObject> toDestory;
+    private void OnMouseEnter()
+    {
+        anim.Play("CubeOpen0");
+    }
 
-	float acc = 0;
-	bool active = false;
+    private void OnMouseExit()
+    {
+        anim.Play("CubeClose0");
 
-	int specialIndex = 1;
+    }
 
-	void Update () {
-		if (active)
-			acc += Time.deltaTime;
+    void Update () {
 
-		if (acc > timeDelayed) {
 
-			// destroy something
-			foreach(var s in toDestory) {
-				Destroy (s.gameObject);
-			}
-
-			SceneManager.LoadScene (sceneBuildIndex);
-		}
 	}
 
-	public void GoToNextScene () {
-		active = true;
-	}
+	public void GoToNextScene (int scene) {
+        SceneManager.LoadScene(scene);
+
+    }
 }

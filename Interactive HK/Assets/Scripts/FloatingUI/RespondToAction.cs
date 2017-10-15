@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // 相应鼠标的点击
 public class RespondToAction : MonoBehaviour {
@@ -12,6 +13,7 @@ public class RespondToAction : MonoBehaviour {
     public ReadingIt whatToRead;
 
     public bool 点击一次后消失 = true;
+    public UnityEvent onClickIfNoReading;
 
     private GameObject player;
     private Animator anim;
@@ -68,8 +70,8 @@ public class RespondToAction : MonoBehaviour {
                 if (whatToRead.GetReadingStatus() == false)
                     whatToRead.StartReading();
                 //Debug.Log("点击了鼠标，触发transition动画: " + transitionManager);
-
             } else {
+                onClickIfNoReading.Invoke();
             }
             if (点击一次后消失)
                 StartCoroutine(LateDisable());
