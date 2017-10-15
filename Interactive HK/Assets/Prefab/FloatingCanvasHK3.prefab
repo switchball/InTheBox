@@ -217,18 +217,7 @@ MonoBehaviour:
   target: {fileID: 114234727807792386}
   started:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Lock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   ended:
@@ -316,14 +305,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "\u6211\u5F84\u76F4\u8D70\u5411\u4F60\r\n\n\n\n"
+  m_Text: "\n\u6211\u5F84\u76F4\u8D70\u5411\u4F60\r\n\n\n\n"
 --- !u!222 &222107600072218396
 CanvasRenderer:
   m_ObjectHideFlags: 1
