@@ -412,6 +412,11 @@ MonoBehaviour:
   transitionManager: {fileID: 0}
   whatToRead: {fileID: 0}
   "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
+  onClickIfNoReading:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &125643291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1399,10 @@ Prefab:
       propertyPath: textShown
       value: "\u6211\u5BB3\u6015"
       objectReference: {fileID: 0}
+    - target: {fileID: 1433612064165174, guid: d4d68af95a440314dae3530bb01ce247, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4d68af95a440314dae3530bb01ce247, type: 2}
   m_IsPrefabParent: 0
@@ -2191,6 +2200,11 @@ MonoBehaviour:
   transitionManager: {fileID: 950120239}
   whatToRead: {fileID: 0}
   "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
+  onClickIfNoReading:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &1035741734 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4651380179081416, guid: 5e8708f564f769e4a8f4ba038ed73b0d,
@@ -3150,7 +3164,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 375
+      value: 374
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -3160,7 +3174,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 730
+      value: 728
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -3180,7 +3194,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 375
+      value: 374
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -3190,7 +3204,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 730
+      value: 728
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4786,3 +4800,70 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!1 &2109146254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2109146257}
+  - component: {fileID: 2109146256}
+  - component: {fileID: 2109146255}
+  m_Layer: 0
+  m_Name: ScreenFadeControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2109146255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2109146254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaa7c52c4c38d449a19912a40a80a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeOnAwake: 1
+  transition: {fileID: 2109146256}
+  transitionType: 1
+  inAndOutWaitTime: 3
+  waitTransitionComplete: 0
+--- !u!114 &2109146256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2109146254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650c3f4d0ab629f448360168cd368ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outWhenAwake: 0
+  autoActivate: 1
+  delayIn: 0.5
+  delayOut: 0.5
+  ignoreTimeScale: 0
+  durationIn: 0
+  durationOut: 0
+  easeIn: 4
+  easeOut: 4
+  color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &2109146257
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2109146254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.453785, y: -5.0290565, z: 3.200963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

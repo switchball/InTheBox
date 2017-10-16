@@ -222,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222836089}
   - component: {fileID: 222836088}
+  - component: {fileID: 222836090}
   m_Layer: 0
   m_Name: TitleBGM
   m_TagString: Untagged
@@ -322,6 +323,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222836090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222836087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32047f60795bc3440a29d1181d4adb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outWhenAwake: 0
+  autoActivate: 1
+  delayIn: 0
+  delayOut: 0
+  ignoreTimeScale: 0
+  durationIn: 0.8
+  durationOut: 1
+  easeIn: 21
+  easeOut: 21
+  inAudioSetting:
+    volume: 1
+  outAudioSetting:
+    volume: 0
+  autoControl: 0
 --- !u!1 &278487840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1192,18 @@ MonoBehaviour:
   transitionManager: {fileID: 1043251310}
   transitionInStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222836090}
+        m_MethodName: TransitionOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   transitionInCompleted:
@@ -1231,7 +1268,7 @@ MonoBehaviour:
   durationOut: 2
   easeIn: 21
   easeOut: 21
-  colorIn: {r: 1, g: 1, b: 1, a: 1}
+  colorIn: {r: 0, g: 0, b: 0, a: 1}
   colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &1043251311
 MonoBehaviour:
