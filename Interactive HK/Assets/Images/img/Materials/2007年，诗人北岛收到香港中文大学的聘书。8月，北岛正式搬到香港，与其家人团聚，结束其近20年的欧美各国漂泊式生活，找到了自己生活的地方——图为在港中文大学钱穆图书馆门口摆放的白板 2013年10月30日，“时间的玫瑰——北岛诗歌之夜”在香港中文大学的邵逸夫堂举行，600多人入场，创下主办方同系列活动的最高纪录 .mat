@@ -6,8 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SkyBox
-  m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: "2007\u5E74\uFF0C\u8BD7\u4EBA\u5317\u5C9B\u6536\u5230\u9999\u6E2F\u4E2D\u6587\u5927\u5B66\u7684\u8058\u4E66\u30028\u6708\uFF0C\u5317\u5C9B\u6B63\u5F0F\u642C\u5230\u9999\u6E2F\uFF0C\u4E0E\u5176\u5BB6\u4EBA\u56E2\u805A\uFF0C\u7ED3\u675F\u5176\u8FD120\u5E74\u7684\u6B27\u7F8E\u5404\u56FD\u6F02\u6CCA\u5F0F\u751F\u6D3B\uFF0C\u627E\u5230\u4E86\u81EA\u5DF1\u751F\u6D3B\u7684\u5730\u65B9\u2014\u2014\u56FE\u4E3A\u5728\u6E2F\u4E2D\u6587\u5927\u5B66\u94B1\u7A46\u56FE\u4E66\u9986\u95E8\u53E3\u6446\u653E\u7684\u767D\u677F
+    2013\u5E7410\u670830\u65E5\uFF0C\u201C\u65F6\u95F4\u7684\u73AB\u7470\u2014\u2014\u5317\u5C9B\u8BD7\u6B4C\u4E4B\u591C\u201D\u5728\u9999\u6E2F\u4E2D\u6587\u5927\u5B66\u7684\u90B5\u9038\u592B\u5802\u4E3E\u884C\uFF0C600\u591A\u4EBA\u5165\u573A\uFF0C\u521B\u4E0B\u4E3B\u529E\u65B9\u540C\u7CFB\u5217\u6D3B\u52A8\u7684\u6700\u9AD8\u7EAA\u5F55 "
+  m_Shader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,10 +19,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BackTex:
-        m_Texture: {fileID: 2800000, guid: 2cbad2ebbe3bb2046bb2c291d91a0dee, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -38,24 +35,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DownTex:
-        m_Texture: {fileID: 2800000, guid: bdcf30435a0f659479fdba9f167f80b7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: 2f237cf8df68d79429f2efacb237f224, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: 87eaa65f98f88524c9b9ed4da4f4bdd3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6f424c5458623d34990880673e7e7f1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -70,34 +55,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RightTex:
-        m_Texture: {fileID: 2800000, guid: 6d0d27f61ea079342b974894bcee2a6f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _UpTex:
-        m_Texture: {fileID: 2800000, guid: 86d5efa6f41919844b1b56f7a8cb37ee, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Exposure: 1.07
-    - _GlossMapScale: 1
     - _Glossiness: 0.5
-    - _GlossyReflections: 1
+    - _HeightFogEnd: 0
+    - _HeightFogStart: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 232.80347
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.73022306, g: 0.7205882, b: 1, a: 0.5}
+    - _HeightFogColor: {r: 0, g: 0, b: 0, a: 0}

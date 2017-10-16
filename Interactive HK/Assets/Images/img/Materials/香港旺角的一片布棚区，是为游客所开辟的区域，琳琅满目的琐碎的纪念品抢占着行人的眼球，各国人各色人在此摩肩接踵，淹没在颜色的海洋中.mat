@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: "\u9999\u6E2F\u65FA\u89D2\u7684\u4E00\u7247\u5E03\u68DA\u533A\uFF0C\u662F\u4E3A\u6E38\u5BA2\u6240\u5F00\u8F9F\u7684\u533A\u57DF\uFF0C\u7433\u7405\u6EE1\u76EE\u7684\u7410\u788E\u7684\u7EAA\u5FF5\u54C1\u62A2\u5360\u7740\u884C\u4EBA\u7684\u773C\u7403\uFF0C\u5404\u56FD\u4EBA\u5404\u8272\u4EBA\u5728\u6B64\u6469\u80A9\u63A5\u8E35\uFF0C\u6DF9\u6CA1\u5728\u989C\u8272\u7684\u6D77\u6D0B\u4E2D"
+  m_Shader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5f0f523bcf2489e4f80616c7a1762b98, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
