@@ -40,6 +40,8 @@ sysinfo.txt
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+*/[Bb]uilds/
+*/[Bb]uild/
 
 
 # Visual Studio 2015 cache directory
