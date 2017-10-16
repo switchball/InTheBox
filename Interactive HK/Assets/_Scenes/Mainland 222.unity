@@ -4226,7 +4226,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 374
+      value: 376.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4236,7 +4236,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 728
+      value: 733
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4256,7 +4256,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 374
+      value: 376.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4266,7 +4266,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 728
+      value: 733
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -11986,7 +11986,7 @@ Prefab:
     - target: {fileID: 114847997912470744, guid: 0750d29da640996419c9c143f1f7c265,
         type: 2}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: "\u201C\u9999\u6E2F\u6CA1\u6709\u5927\u9646\u7684\u9542\u7A7A\u548C\u7E41\u590D\uFF0C\u66F4\u591A\u7684\u662Fcolorful\uFF0C\u4EE5\u53CA\u5411\u897F\u65B9\u503E\u659C\u7684\u5757\u72B6\u7A7A\u95F4\u8868\u8FBE\uFF0C\u5B83\u7684\u91CD\u70B9\u5728\u7ED3\u6784\u548C\u683C\u67B6\u3002\u897F\u65B9\u7684\u7B80\u7EA6\u98CE\u683C\u5939\u6742\u5927\u91CF\u6805\u680F\u5F0F\u7ED3\u6784\u8868\u8FBE\uFF0C\u7ED9\u4EBA\u4E00\u79CD\u7D27\u95ED\u611F\uFF0C\u89C4\u5219\u611F\uFF0C\u4F46\u6805\u680F\u662F\u76F4\u7EBF\u7684\u7A7A\u683C\uFF0C\u7D27\u95ED\u5374\u4ECD\u900F\u6C14\uFF0C\u4EFF\u4F5B\u5728\u4F20\u8FBE\u4E00\u79CD\u5728\u7981\u95ED\u4E2D\u5598\u606F\u7684\u613F\u671B\u3002\u8FD9\u91CC\u4E0D\u82E5\u5730\u5E7F\u4EBA\u7A00\u7684\u897F\u65B9\uFF0C\u5927\u89C4\u683C\u827A\u672F\u8BBE\u8BA1\u96BE\u4EE5\u6210\u4E3A\u4E3B\u6D41\u3002\u201D"
+      value: "\u9999\u6E2F\u6CA1\u6709\u5927\u9646\u7684\u9542\u7A7A\u548C\u7E41\u590D\uFF0C\u66F4\u591A\u7684\u662Fcolorful\uFF0C\u4EE5\u53CA\u5411\u897F\u65B9\u503E\u659C\u7684\u5757\u72B6\u7A7A\u95F4\u8868\u8FBE\uFF0C\u5B83\u7684\u91CD\u70B9\u5728\u7ED3\u6784\u548C\u683C\u67B6\u3002\u897F\u65B9\u7684\u7B80\u7EA6\u98CE\u683C\u5939\u6742\u5927\u91CF\u6805\u680F\u5F0F\u7ED3\u6784\u8868\u8FBE\uFF0C\u7ED9\u4EBA\u4E00\u79CD\u7D27\u95ED\u611F\uFF0C\u89C4\u5219\u611F\uFF0C\u4F46\u6805\u680F\u662F\u76F4\u7EBF\u7684\u7A7A\u683C\uFF0C\u7D27\u95ED\u5374\u4ECD\u900F\u6C14\uFF0C\u4EFF\u4F5B\u5728\u4F20\u8FBE\u4E00\u79CD\u5728\u7981\u95ED\u4E2D\u5598\u606F\u7684\u613F\u671B\u3002"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0750d29da640996419c9c143f1f7c265, type: 2}
@@ -18826,10 +18826,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Sham Shui Po, a relatively less developed district in
-            west Kowloon. While the commerce is surprisingly prosperous. Intensive
-            objects, dazzling clours, countless people --wonderful place to experience
-            Hong Kong civil culture.
+          m_StringArgument: "\u9999\u6E2F\u597D\u5C0F\uFF0C\u65E0\u8BBA\u662F\u9152\u5E97\u5206\u914D\u7684\u7A7A\u95F4\uFF0C\u8FD8\u662F\u697C\u5B87\u95F4\u7684\u7F1D\u9699\uFF0C\u8FDC\u671B\u5C31\u597D\u50CF\u5BC6\u5BC6\u9EBB\u9EBB\u6324\u5728\u4E00\u8D77\u7684\u67D0\u79CD\u6606\u866B\u7684\u5DE2\u7A74\uFF0C\u4ECE\u5E95\u90E8\u5411\u4E0A\u770B\u53BB\uFF0C\u4E0D\u514D\u7729\u6655"
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
