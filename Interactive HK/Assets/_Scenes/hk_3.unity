@@ -2217,22 +2217,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 374
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -173.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 728
+      value: 596
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 327
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -2247,22 +2247,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 374
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -173.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 728
+      value: 596
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 327
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive
@@ -2277,7 +2277,7 @@ Prefab:
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 14
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -2287,7 +2287,7 @@ Prefab:
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 14
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b7ab0bf01187f8c49a3809a966fd6ceb, type: 3}
   - {fileID: 21300000, guid: e71029ef1964e8c46a5cb5f61170d2bf, type: 3}
   lastTimeAtLeast: 2.5
-  "\u53F3\u4E0B\u89D2\u5B57": 
+  "\u53F3\u4E0B\u89D2\u5B57": "1997\u5E746\u670830\u65E5\u665A\uFF0C\u4E2D\u82F1\u4E24\u56FD\u4E3E\u884C\u9999\u6E2F\u4E3B\u6743\u4EA4\u63A5\u4EEA\u5F0F|\u9999\u6E2F\u56DE\u5F52\u7956\u56FD"
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -3304,22 +3304,22 @@ Prefab:
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 374
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -173.5
       objectReference: {fileID: 0}
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 748
+      value: 616
       objectReference: {fileID: 0}
     - target: {fileID: 224020176181246330, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 347
       objectReference: {fileID: 0}
     - target: {fileID: 114234727807792386, guid: b4b0eee9162e0624288e78eab7ec57b7,
         type: 2}
@@ -3731,9 +3731,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8a51c83326cc9bf4e8cd7ab088a79d67, type: 3}
   - {fileID: 21300000, guid: 82affde4d99327142a6b78fa71a5509c, type: 3}
   lastTimeAtLeast: 1.5
-  "\u53F3\u4E0B\u89D2\u5B57": "1973\u5E747\u670820\u65E5\uFF0C\u674E\u5C0F\u9F99\u5728\u9999\u6E2F\u901D\u4E16\uFF0C\u4EAB\u5E7433\u5C81
-    \ |\u5728\u9999\u6E2F\u5B9A\u5C4518\u5E74\uFF0C\u662F\u4E2D\u56FD\u6587\u5316\u4E16\u754C\u6027\u7684\u72EC\u7279\u7B26\u53F7
-    \ "
+  "\u53F3\u4E0B\u89D2\u5B57": "1973\u5E747\u670820\u65E5\uFF0C\u674E\u5C0F\u9F99\u5728\u9999\u6E2F\u901D\u4E16\uFF0C\u4EAB\u5E7433\u5C81|\u751F\u524D\u5728\u9999\u6E2F\u5B9A\u5C4518\u5E74"
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -3972,7 +3970,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 25cd16eb58337124390546b05a2e2ded, type: 3}
   - {fileID: 21300000, guid: 39611767996789c4b8edcf3b99d68155, type: 3}
   lastTimeAtLeast: 2
-  "\u53F3\u4E0B\u89D2\u5B57": 
+  "\u53F3\u4E0B\u89D2\u5B57": "\u9EA6\u7406\u6D69(Crford Murray MacLehose\uFF09|1971\u5E74\u81F31982\u5E74\u51FA\u4EFB\u7B2C25\u4EFB\u9999\u6E2F\u603B\u7763|\u4EFB\u671F\u524D\u540E\u957F\u8FBE\u5341\u5E74\u534A\uFF0C\u5148\u540E\u83B7\u56DB\u5EA6\u8FDE\u4EFB"
   onFinished:
     m_PersistentCalls:
       m_Calls:

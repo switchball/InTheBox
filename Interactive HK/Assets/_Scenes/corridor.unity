@@ -3228,7 +3228,7 @@ Prefab:
     - target: {fileID: 114991182909600418, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 144
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -4811,7 +4811,7 @@ GameObject:
   - component: {fileID: 2109146256}
   - component: {fileID: 2109146255}
   m_Layer: 0
-  m_Name: ScreenFadeControl
+  m_Name: "ScreenFade\u9632\u95EA"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

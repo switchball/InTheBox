@@ -22663,7 +22663,7 @@ Prefab:
     - target: {fileID: 114991182909600418, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114991182909600418, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}

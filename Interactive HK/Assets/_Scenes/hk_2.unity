@@ -4120,7 +4120,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 712586438}
-  m_LocalRotation: {x: 0.6537192, y: -0.606054, z: 0.29325104, w: 0.3454759}
+  m_LocalRotation: {x: 0.65371925, y: -0.60605407, z: 0.29325107, w: 0.34547594}
   m_LocalPosition: {x: 0.2, y: 10.7, z: 7.8}
   m_LocalScale: {x: 0.8890703, y: 0.88907033, z: 0.8890704}
   m_Children: []
@@ -5247,22 +5247,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 385
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -216.5
+      value: -173.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 750
+      value: 596
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 413
+      value: 327
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5273,7 +5273,7 @@ Prefab:
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 10
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5283,7 +5283,7 @@ Prefab:
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 14
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5294,7 +5294,7 @@ Prefab:
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5314,27 +5314,27 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 385
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -216.5
+      value: -173.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 750
+      value: 596
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 413
+      value: 327
       objectReference: {fileID: 0}
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_FontData.m_MaxSize
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -8247,7 +8247,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4597e2365d4558846bc76a6e41459e11, type: 3}
   - {fileID: 21300000, guid: c52b7fc2bb52a774895fb8953312ab0b, type: 3}
   lastTimeAtLeast: 0.5
-  "\u53F3\u4E0B\u89D2\u5B57": 
+  "\u53F3\u4E0B\u89D2\u5B57": "\u516D\u4E03\u66B4\u52A8\u4E2D\uFF0C\u6B63\u5728\u5BF9\u5CD9\u7684\u8B66\u5BDF\u4E0E\u6E38\u884C\u7FA4\u4F17"
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -9334,6 +9334,11 @@ Prefab:
       propertyPath: onArrive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114468441207285292, guid: 7fae616cb0680d643b337c20ab1cd3fa,
+        type: 2}
+      propertyPath: SplashLogo
+      value: 
+      objectReference: {fileID: 2800000, guid: a7e9814fda884754cb6ca2272091d9f1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}
   m_IsPrefabParent: 0
@@ -10833,7 +10838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outWhenAwake: 1
   autoActivate: 0
-  delayIn: 10
+  delayIn: 8.5
   delayOut: 0.5
   ignoreTimeScale: 0
   durationIn: 2
@@ -12044,7 +12049,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f67b564a6e681ae4fb0af941c308f44b, type: 3}
   - {fileID: 21300000, guid: 956444c4836dd6142bccf473611c21d7, type: 3}
   lastTimeAtLeast: 2
-  "\u53F3\u4E0B\u89D2\u5B57": 
+  "\u53F3\u4E0B\u89D2\u5B57": "1972\u5E745\u670813\u65E5\uFF0C\u8FD1\u4E24\u5343\u4EBA\u7531\u7687\u540E\u7801\u5934\u548C\u7EF4\u56ED\u6E38\u884C\u81F3\u7F8E\u65E5\u9886\u4E8B\u9986\u793A\u5A01"
   onFinished:
     m_PersistentCalls:
       m_Calls:
@@ -12402,7 +12407,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2135539966}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
@@ -12475,7 +12480,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8253abde4d71fdd4c90927a9b1af2eac, type: 3}
   - {fileID: 21300000, guid: 4aa93bb8999597d408ce418fb85b0574, type: 3}
   lastTimeAtLeast: 0.5
-  "\u53F3\u4E0B\u89D2\u5B57": 
+  "\u53F3\u4E0B\u89D2\u5B57": "1943\u5E7411\u670825\u65E5\uFF0C\u53C2\u52A0\u5F00\u7F57\u4F1A\u8BAE\u7684\u9886\u5BFC\u4EBA\u5408\u5F71|\u524D\u6392\u4ECE\u5DE6\u81F3\u53F3\u4F9D\u6B21\u4E3A\u848B\u4ECB\u77F3\u3001\u7F57\u65AF\u798F\u3001\u4E18\u5409\u5C14\u548C\u5B8B\u7F8E\u9F84|\u5728\u4F1A\u4E0A\uFF0C\u4E18\u5409\u5C14\u62D2\u7EDD\u5411\u4E2D\u56FD\u5F52\u8FD8\u9999\u6E2F"
   onFinished:
     m_PersistentCalls:
       m_Calls:
