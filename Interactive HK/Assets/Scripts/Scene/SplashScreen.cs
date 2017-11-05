@@ -128,7 +128,7 @@ public class SplashScreen : MonoBehaviour
         if (async != null)
         {
             int progress = (int)(async.progress * 100);
-            GUI.Label(new Rect(100, 180, 300, 60), "Async Loading Progress:" + progress);
+            GUI.Label(new Rect(10, 10, 300, 60), "Async Loading Progress:" + progress);
         }
 
 
