@@ -55,8 +55,14 @@ public class SplashScreen : MonoBehaviour
 
     private bool flag = true;
 
+    public bool 主动预加载下一场景 = true;
+    private AsyncOperation async;   //定义异步加载
+
     void Start()
     {
+        if (主动预加载下一场景)
+            StartPreLoad();
+
         mDelayTimeLeft = DelayTime;
         //保存相机
         mCam = Camera.main;
@@ -119,6 +125,13 @@ public class SplashScreen : MonoBehaviour
 
     void OnGUI()
     {
+        if (async != null)
+        {
+            int progress = (int)(async.progress * 100);
+            GUI.Label(new Rect(100, 180, 300, 60), "Async Loading Progress:" + progress);
+        }
+
+
         if (flag)
             return;
 
@@ -166,11 +179,7 @@ public class SplashScreen : MonoBehaviour
                 {
                     Debug.LogWarning("LoadLevelThenFadeOut");
                     mCam.depth = -1000;
-                    if (LevelToLoad != "")
-                        SceneManager.LoadScene(LevelToLoad);
-                    else
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                    //StartCoroutine(LoadSence());
+                    JumpNextScene();
                 }
             }
 
@@ -203,14 +212,6 @@ public class SplashScreen : MonoBehaviour
         
     }
 
-    public IEnumerator LoadSence()
-    {
-        yield return new WaitForSeconds(0);
-        SceneManager.LoadScene(0);
-        yield return new WaitForSeconds(WaitTime);
-        Destroy(this.gameObject);
-
-    }
     void OnLevelWasLoaded(int index)
     {
         //如果目标关卡已加载需要手动销毁场景中的GUI和AudioListener
@@ -241,9 +242,41 @@ public class SplashScreen : MonoBehaviour
 
     public void JumpNextScene()
     {
-        if (LevelToLoad != "")
-            SceneManager.LoadScene(LevelToLoad);
+        Debug.Log("JumpNextScene");
+        if (async == null)
+        {
+            if (LevelToLoad != "")
+                SceneManager.LoadScene(LevelToLoad);
+            else
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        {
+            async.allowSceneActivation = true;
+        }
+    }
+
+    public void StartPreLoad() {
+        Debug.Log("Preload start!");
+        StartCoroutine(ScenePreLoad());
+    }
+
+
+    IEnumerator ScenePreLoad()
+    {
+        yield return new WaitForSeconds(1.0f);
+        if (LevelToLoad != "")
+            async = SceneManager.LoadSceneAsync(LevelToLoad);
+        else
+            async = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        async.allowSceneActivation = false;//场景暂时不进入
+        Debug.Log("Here");
+        yield return async;
+    }
+
+    //激活场景
+    public void ActivatedScene()
+    {
+        async.allowSceneActivation = true;
     }
 }
