@@ -1781,11 +1781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eba5f053afb6324d9c0fe497e65c45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charsPerSecond: 2
-  indicatorSpeed: 8
+  charsPerSecond: 10
+  indicatorSpeed: 32
   textTargets:
-  - "\u6C34\u5751\u53E3\u8857"
-  - "\u662F\u4E00\u6761\u8857"
+  - "\u201C(\uFF61\uFF65\u2200\uFF65)\uFF89\uFF9E\u55E8\uFF01\u201D"
+  - "\u201C\u55E8\uFF0C\u4F60\u4E5F\u5728      \u8FD9     \u91CC      \u554A\u3002\u201D"
+  - "\u201C\u4E00\u8D77\u53BB\u5403\u996D\u5417\uFF1F\u201D"
   typewritingStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -1856,12 +1857,13 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 55
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u6C34\u5751\u53E3\u8857\n\u662F\u4E00\u6761\u8857"
+  m_Text: "\u201C(\uFF61\uFF65\u2200\uFF65)\uFF89\uFF9E\u55E8\uFF01\u201D\n\u201C\u55E8\uFF0C\u4F60\u4E5F\u5728
+    \     \u8FD9     \u91CC      \u554A\u3002\u201D\n\u201C\u4E00\u8D77\u53BB\u5403\u996D\u5417\uFF1F\u201D"
 --- !u!222 &229012104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7573,7 +7575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &773440090
 Transform:
   m_ObjectHideFlags: 0
@@ -10983,7 +10985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0ba9d425693984aa9c231342fcdab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outWhenAwake: 0
+  outWhenAwake: 1
   autoActivate: 0
   delayIn: 0.1
   delayOut: 0
@@ -10992,7 +10994,7 @@ MonoBehaviour:
   durationOut: 1
   easeIn: 21
   easeOut: 21
-  colorIn: {r: 0.11724138, g: 0, b: 1, a: 1}
+  colorIn: {r: 0, g: 0, b: 0, a: 1}
   colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &1119904660
 MonoBehaviour:
@@ -11019,7 +11021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11039,7 +11041,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 
+  m_Text: "\u542C\u529B\u5B57\u5E55"
 --- !u!222 &1119904662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11302,6 +11304,11 @@ Prefab:
     - target: {fileID: 4654172738785560, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114468441207285292, guid: 7fae616cb0680d643b337c20ab1cd3fa,
+        type: 2}
+      propertyPath: "\u4E3B\u52A8\u9884\u52A0\u8F7D\u4E0B\u4E00\u573A\u666F"
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}

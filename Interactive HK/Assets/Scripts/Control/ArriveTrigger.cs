@@ -32,7 +32,7 @@ public class ArriveTrigger : MonoBehaviour {
         {
             Debug.LogError("Player should contain MouseLooker script!");
         }
-        if (lookPosObj == null)
+        if (lookPosObj == null && 是否强制移动视角)
         {
             if (transitionManager == null)
             {

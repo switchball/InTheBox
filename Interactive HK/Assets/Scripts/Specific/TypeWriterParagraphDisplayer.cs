@@ -11,8 +11,8 @@ public class TypeWriterParagraphDisplayer : MonoBehaviour
 	public event SimpleEventHandler TypewritingStarted;
 	public event SimpleEventHandler TypewritingCompleted;
 
-	public float charsPerSecond = 30;
-    public float indicatorSpeed = 5;
+	public float charsPerSecond = 10;
+    public float indicatorSpeed = 32;
     public string[] textTargets;
 	public UnityEvent typewritingStarted;
 	public UnityEvent typewritingCompleted;
@@ -79,20 +79,28 @@ public class TypeWriterParagraphDisplayer : MonoBehaviour
                 accTime += 1f / indicatorSpeed;
                 if (accTime + 1e-6 >= 1f / charsPerSecond)
                 {
-                    typeWriterText += textLine[i];
+                    if (textLine[i] != ' ')
+                    {
+                        typeWriterText += textLine[i];
+                        if (!audioSource.isPlaying)
+                            audioSource.Play();
+                    } else
+                    {
+                        audioSource.Pause();
+                    }
                     accTime -= 1f / charsPerSecond;
                     i++;
                 }
-                Text = typeWriterText + (indicatorFlag++ % 2 == 0 ? "|" : "");
+                Text = typeWriterText + ((int)((indicatorFlag++)/4) % 2 == 0 ? "|" : "");
             }
             audioSource.Stop();
             for (int j = 0; j < indicatorSpeed; j++)
             {
-                Text = typewritingText + (indicatorFlag++ % 2 == 0 ? "|" : "");
+                Text = typeWriterText + ((int)((indicatorFlag++) / 4) % 2 == 0 ? "|" : "");
                 yield return new WaitForSeconds(1f / indicatorSpeed);
             }
         }
-        Text = typewritingText;
+        Text = typewritingText.Replace(" ", "");
         OnCompleted ();
 	}
 
