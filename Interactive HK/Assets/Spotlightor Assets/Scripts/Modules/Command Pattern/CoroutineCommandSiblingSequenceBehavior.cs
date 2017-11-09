@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class CoroutineCommandSiblingSequenceBehavior : CoroutineCommandBehavior
 {
 	public bool loop = false;
+    public float delay = 0;
 
 	protected override IEnumerator CoroutineCommand ()
 	{
@@ -18,7 +19,10 @@ public class CoroutineCommandSiblingSequenceBehavior : CoroutineCommandBehavior
 
 			foreach (CoroutineCommandBehavior command in commandSequence) {
 				if (command.gameObject.activeSelf)
+                {
 					yield return StartCoroutine (command.ExecuteCoroutine ());
+                    yield return new WaitForSeconds(delay);
+                }
 			}
 		} while(loop);
 	}

@@ -49,17 +49,31 @@ public class RespondToAction : MonoBehaviour {
         {
             if (mInView)
             {
-                anim.SetBool("Reverse", false);
-                //Debug.LogWarning("in view");
-                anim.StopPlayback();
-                anim.Play("CubeOpen0");
+                // Open Box 
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+                {
+                    anim.SetFloat("PlaySpeed", 1.0f);
+                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
+                        anim.Play("CubeOpen0", -1, 0); // start from normalizedTime = 0
+                }
+                else
+                {
+                    anim.Play("CubeOpen0");
+                }
             }
             else
             {
-                anim.SetBool("Reverse", true);
-                //Debug.LogWarning("not in view");
-                anim.StopPlayback();
-                anim.Play("CubeClose0");
+                // Close Box
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+                {
+                    anim.SetFloat("PlaySpeed", -1.0f);
+                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+                        anim.Play("CubeOpen0", -1, 1); // start from normalizedTime = 1
+                }
+                else
+                {
+                    anim.Play("CubeOpen0");
+                }
             }
         }
 

@@ -12,7 +12,8 @@ public class SceneJump : MonoBehaviour {
     private void Start()
     {
         anim = GetComponent<Animator>();
-        anim.Play("CubeClose0");
+        anim.Play("CubeOpen");
+        anim.SetFloat("PlaySpeed", 0.0f);
     }
 
     private void OnMouseDown()
@@ -26,21 +27,38 @@ public class SceneJump : MonoBehaviour {
 
     private void OnMouseEnter()
     {
-        anim.Play("CubeOpen0");
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+        {
+            anim.SetFloat("PlaySpeed", 1.0f);
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
+                anim.Play("CubeOpen0", -1, 0); // start from normalizedTime = 0
+        } else
+        {
+            anim.Play("CubeOpen0");
+        }
     }
 
     private void OnMouseExit()
     {
-        anim.Play("CubeClose0");
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+        {
+            anim.SetFloat("PlaySpeed", -1.0f);
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+                anim.Play("CubeOpen0", -1, 1); // start from normalizedTime = 1
+        }
+        else
+        {
+            anim.Play("CubeOpen0");
+        }
 
     }
 
     void Update () {
 
 
-	}
+    }
 
-	public void GoToNextScene (int scene) {
+    public void GoToNextScene (int scene) {
         SceneManager.LoadScene(scene);
 
     }
