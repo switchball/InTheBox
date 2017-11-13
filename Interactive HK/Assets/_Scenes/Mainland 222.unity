@@ -699,7 +699,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 1857.1975, y: 1857.1975, z: 0}
+  Offset: {x: 1857.2175, y: 1857.2175, z: 0}
 --- !u!108 &25779065
 Light:
   m_ObjectHideFlags: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 2118.9402, y: 2118.9402, z: 0}
+  Offset: {x: 2118.9602, y: 2118.9602, z: 0}
 --- !u!108 &125722018
 Light:
   m_ObjectHideFlags: 0
@@ -4686,7 +4686,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 419.82718, y: 419.82718, z: 0}
+  Offset: {x: 419.84717, y: 419.84717, z: 0}
 --- !u!108 &425678042
 Light:
   m_ObjectHideFlags: 0
@@ -6011,7 +6011,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -313.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -6021,7 +6021,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 607
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -6041,7 +6041,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -313.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -6051,7 +6051,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 607
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive
@@ -6738,7 +6738,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 2025.2063, y: 2025.2063, z: 0}
+  Offset: {x: 2025.2263, y: 2025.2263, z: 0}
 --- !u!108 &558586749
 Light:
   m_ObjectHideFlags: 0
@@ -13430,7 +13430,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 2013.979, y: 2013.979, z: 0}
+  Offset: {x: 2013.999, y: 2013.999, z: 0}
 --- !u!108 &1181764966
 Light:
   m_ObjectHideFlags: 0
@@ -15830,7 +15830,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 419.82718, y: 419.82718, z: 0}
+  Offset: {x: 419.84717, y: 419.84717, z: 0}
 --- !u!1001 &1366130055
 Prefab:
   m_ObjectHideFlags: 0
@@ -24108,7 +24108,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 419.82718, y: 419.82718, z: 0}
+  Offset: {x: 419.84717, y: 419.84717, z: 0}
 --- !u!108 &1998914688
 Light:
   m_ObjectHideFlags: 0
@@ -24954,7 +24954,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 2118.9402, y: 2118.9402, z: 0}
+  Offset: {x: 2118.9602, y: 2118.9602, z: 0}
 --- !u!108 &2049365318
 Light:
   m_ObjectHideFlags: 0
