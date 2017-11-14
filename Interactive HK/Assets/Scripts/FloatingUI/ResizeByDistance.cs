@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // 根据与Player距离的远近，调整scale
 public class ResizeByDistance : MonoBehaviour {
@@ -13,7 +14,12 @@ public class ResizeByDistance : MonoBehaviour {
     private GameObject player;
     private MouseLooker looker;
 
+    public UnityEvent onFirstSight;
+    private bool firstSightTriggered = false;
+
     private float distance;
+    [HideInInspector]
+    public float animScaleMultiplier = 1.0f;
 
     [ColorUsage(true, true, 0, 8, 0.125f, 3)]
     public Color colorIn = Color.white;
@@ -66,8 +72,30 @@ public class ResizeByDistance : MonoBehaviour {
             distance = d;
         }
         float ratio = distance / standardDistance;
-        transform.localScale = mScale * ratio;
+        transform.localScale = mScale * ratio * animScaleMultiplier;
         float progress = Mathf.InverseLerp(visibleDistance.x, visibleDistance.y, distance);
         ColorDisplayer.Display(Color.Lerp(colorIn, colorOut, progress));
+
+        // distance to event
+        if (!firstSightTriggered)
+        {
+            if (distance < visibleDistance.y)
+            {
+                if (IsInViewpoint())
+                {
+                    onFirstSight.Invoke();
+                    firstSightTriggered = true;
+                    
+                }
+            }
+        }
+    }
+
+    private bool IsInViewpoint()
+    {
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        return 0.1f <= pos.x && pos.x <= 0.9f
+            && 0.1f <= pos.y && pos.y <= 0.9f
+            && 0.1f <= pos.z;
     }
 }

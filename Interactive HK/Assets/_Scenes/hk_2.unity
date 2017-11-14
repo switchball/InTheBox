@@ -633,10 +633,8 @@ MonoBehaviour:
   "\u5899\u4E0A\u7684\u56FE\u7247": {fileID: 21300000, guid: 025b4a03f4486e44a95d1a0552dd5e0a,
     type: 3}
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
-  - {fileID: 21300000, guid: ab7462a7d9cf95949b643d8a2d4be316, type: 3}
-  - {fileID: 21300000, guid: fff21884e87fc294b8968c8bf9e7f186, type: 3}
   - {fileID: 21300000, guid: 1425c26514c9ac54ca19cdf00addbba6, type: 3}
-  - {fileID: 21300000, guid: 51bbdbccd5ef59d49b8710aff317ef6d, type: 3}
+  - {fileID: 21300000, guid: ab7462a7d9cf95949b643d8a2d4be316, type: 3}
   lastTimeAtLeast: 0.5
   "\u53F3\u4E0B\u89D2\u5B57": 
   onFinished:
@@ -3432,7 +3430,6 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: aba1a7764721b6d4b84426b1334ce5b8, type: 3}
   - {fileID: 21300000, guid: 81b0d7a4d8f05264fa73366fcecac1fb, type: 3}
-  - {fileID: 21300000, guid: eca869d2e12b2b64c80ac1021d9c1b98, type: 3}
   lastTimeAtLeast: 0.5
   "\u53F3\u4E0B\u89D2\u5B57": "1925\u5E747\u67083\u65E5\uFF0C\u7701\u6E2F\u7F62\u5DE5\u59D4\u5458\u4F1A\u6210\u7ACB|\u56FE\u4E3A\u59D4\u5458\u4F1A\u90E8\u5206\u6210\u5458\u5408\u5F71
     \u4E43\u4E2D\u5171\u521D\u521B\u65F6\u671F\u5728\u9999\u6E2F\u7684\u6D3B\u52A8"
@@ -4120,7 +4117,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 712586438}
-  m_LocalRotation: {x: 0.65371925, y: -0.60605407, z: 0.29325107, w: 0.34547594}
+  m_LocalRotation: {x: 0.6537192, y: -0.606054, z: 0.29325104, w: 0.3454759}
   m_LocalPosition: {x: 0.2, y: 10.7, z: 7.8}
   m_LocalScale: {x: 0.8890703, y: 0.88907033, z: 0.8890704}
   m_Children: []
@@ -5247,22 +5244,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 308
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -173.5
+      value: -135.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 596
+      value: 214
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 327
+      value: 251
       objectReference: {fileID: 0}
     - target: {fileID: 114146751524491662, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5314,22 +5311,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 308
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -173.5
+      value: -135.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 596
+      value: 214
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 327
+      value: 251
       objectReference: {fileID: 0}
     - target: {fileID: 114791510013499568, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -10632,17 +10629,10 @@ MonoBehaviour:
   "\u5899\u4E0A\u7684\u56FE\u7247": {fileID: 21300000, guid: 30645873459ca92478e90fe84c01d417,
     type: 3}
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
-  - {fileID: 21300000, guid: 44238de9053ce5841814aefb252cbba1, type: 3}
-  - {fileID: 21300000, guid: 5aa1c8f25f710de40b0497811fedd3c7, type: 3}
   - {fileID: 21300000, guid: 9fc5fd86b39b5c342918f266dccdc687, type: 3}
-  - {fileID: 21300000, guid: 48a08abeb0222d148937ef50a9381597, type: 3}
-  - {fileID: 21300000, guid: b4c1f245fe565a34f844b5717f5e17b7, type: 3}
-  - {fileID: 21300000, guid: 17d6c751cd112fe419a541d69cf180ae, type: 3}
-  - {fileID: 21300000, guid: 5c958b3ce2879fe4182047a440f67ffb, type: 3}
-  - {fileID: 21300000, guid: c262e638f05eadd4693aa8d529f88b51, type: 3}
   - {fileID: 21300000, guid: 177bfa0427144db4c817307238a52983, type: 3}
-  - {fileID: 21300000, guid: 2647e8cd100ef2042a9c7a2c15568749, type: 3}
-  lastTimeAtLeast: 0.5
+  - {fileID: 21300000, guid: 48a08abeb0222d148937ef50a9381597, type: 3}
+  lastTimeAtLeast: 2
   "\u53F3\u4E0B\u89D2\u5B57": "\u62A4\u536B\u76D1\u63A7\u96BE\u6C11\u7684\u9A7B\u6E2F\u82F1\u519B"
   onFinished:
     m_PersistentCalls:
@@ -12045,8 +12035,8 @@ MonoBehaviour:
   "\u5899\u4E0A\u7684\u56FE\u7247": {fileID: 21300000, guid: 7e5cce876d2034547a83558057942d1a,
     type: 3}
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
-  - {fileID: 21300000, guid: 16b8ffe62955ef74aadc5e53bda4f008, type: 3}
   - {fileID: 21300000, guid: f67b564a6e681ae4fb0af941c308f44b, type: 3}
+  - {fileID: 21300000, guid: 16b8ffe62955ef74aadc5e53bda4f008, type: 3}
   - {fileID: 21300000, guid: 956444c4836dd6142bccf473611c21d7, type: 3}
   lastTimeAtLeast: 2
   "\u53F3\u4E0B\u89D2\u5B57": "1972\u5E745\u670813\u65E5\uFF0C\u8FD1\u4E24\u5343\u4EBA\u7531\u7687\u540E\u7801\u5934\u548C\u7EF4\u56ED\u6E38\u884C\u81F3\u7F8E\u65E5\u9886\u4E8B\u9986\u793A\u5A01"
@@ -12476,9 +12466,6 @@ MonoBehaviour:
   "\u6D6E\u73B0\u7684\u56FE\u72472\u5F20":
   - {fileID: 21300000, guid: 5b029d82536839a47be745b8111de8d2, type: 3}
   - {fileID: 21300000, guid: ee24f82c283b79845a26d3f501bc70ff, type: 3}
-  - {fileID: 21300000, guid: fcbc1dc1c36dcfa4b94d414ab9293023, type: 3}
-  - {fileID: 21300000, guid: 8253abde4d71fdd4c90927a9b1af2eac, type: 3}
-  - {fileID: 21300000, guid: 4aa93bb8999597d408ce418fb85b0574, type: 3}
   lastTimeAtLeast: 0.5
   "\u53F3\u4E0B\u89D2\u5B57": "1943\u5E7411\u670825\u65E5\uFF0C\u53C2\u52A0\u5F00\u7F57\u4F1A\u8BAE\u7684\u9886\u5BFC\u4EBA\u5408\u5F71|\u524D\u6392\u4ECE\u5DE6\u81F3\u53F3\u4F9D\u6B21\u4E3A\u848B\u4ECB\u77F3\u3001\u7F57\u65AF\u798F\u3001\u4E18\u5409\u5C14\u548C\u5B8B\u7F8E\u9F84|\u5728\u4F1A\u4E0A\uFF0C\u4E18\u5409\u5C14\u62D2\u7EDD\u5411\u4E2D\u56FD\u5F52\u8FD8\u9999\u6E2F"
   onFinished:

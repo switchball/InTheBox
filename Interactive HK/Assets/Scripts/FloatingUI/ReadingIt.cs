@@ -65,7 +65,7 @@ public class ReadingIt : MonoBehaviour {
         looker = player.GetComponent<MouseLooker>();
 
         // 不显示图片
-        render.sprite = null;
+        // render.sprite = null;
     }
 	
 	// Update is called once per frame

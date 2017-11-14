@@ -63,7 +63,7 @@ public class ReadingItAdvanced : ReadingIt {
         looker = player.GetComponent<MouseLooker>();
 
         // 不显示图片
-        render.sprite = null;
+        // render.sprite = null;
 
         panelImageTrans = canvas.transform.Find("PanelDumb").GetComponent<TransitionManager>();
         imageR2 = canvas.transform.Find("PanelR/Image").GetComponent<Image>();

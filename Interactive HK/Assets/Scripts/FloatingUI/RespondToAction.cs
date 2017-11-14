@@ -19,10 +19,13 @@ public class RespondToAction : MonoBehaviour {
     private Animator anim;
     private bool mInView;
 
+    private ResizeByDistance resizeCompoment;
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        resizeCompoment = GetComponent<ResizeByDistance>();
         if (RespondDistance == 0)
         {
             Debug.LogWarning("需要设置响应操作时玩家距离物体的最大范围，自动重置为5");
@@ -47,6 +50,14 @@ public class RespondToAction : MonoBehaviour {
         // TODO 如果在视野内，则播放动画
         if (anim != null)
         {
+            float a = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            if (a <= 0)
+                a = 1;
+            else if (a >= 1)
+                a = 2;
+            else
+                a = 1 * a + 1;
+            resizeCompoment.animScaleMultiplier = a;
             if (mInView)
             {
                 // Open Box 
