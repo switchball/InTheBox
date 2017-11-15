@@ -13,6 +13,8 @@ public class TypeWriterParagraphDisplayer : MonoBehaviour
 
 	public float charsPerSecond = 10;
     public float indicatorSpeed = 32;
+    public bool oneLineMode = true;
+    public float lineDuration = 1.0f;
     public string[] textTargets;
 	public UnityEvent typewritingStarted;
 	public UnityEvent typewritingCompleted;
@@ -66,12 +68,18 @@ public class TypeWriterParagraphDisplayer : MonoBehaviour
         int indicatorFlag = 0;
 		Text = "";
         yield return new WaitForSeconds(mDelay);
+        string typeWriterText = "";
         foreach(string textLine in typewritingParagraph)
         {
             audioSource.Play();
-            Text = "";
             typewritingText = textLine; // set target text
-		    string typeWriterText = "";
+            if (oneLineMode)
+            {
+                Text = "";
+                typeWriterText = "";
+            }
+            else
+                typeWriterText += (typeWriterText.Length > 0 ? "\n" : "");
             float accTime = 0; int i = 0;
             while (i < textLine.Length)
             {
@@ -97,10 +105,10 @@ public class TypeWriterParagraphDisplayer : MonoBehaviour
             for (int j = 0; j < indicatorSpeed; j++)
             {
                 Text = typeWriterText + ((int)((indicatorFlag++) / 4) % 2 == 0 ? "|" : "");
-                yield return new WaitForSeconds(1f / indicatorSpeed);
+                yield return new WaitForSeconds(lineDuration / indicatorSpeed);
             }
         }
-        Text = typewritingText.Replace(" ", "");
+        Text = typeWriterText.Replace(" ", "");
         OnCompleted ();
 	}
 
