@@ -10187,6 +10187,16 @@ Prefab:
       propertyPath: SplashLogo
       value: 
       objectReference: {fileID: 2800000, guid: a7e9814fda884754cb6ca2272091d9f1, type: 3}
+    - target: {fileID: 114468441207285292, guid: 7fae616cb0680d643b337c20ab1cd3fa,
+        type: 2}
+      propertyPath: LevelToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114468441207285292, guid: 7fae616cb0680d643b337c20ab1cd3fa,
+        type: 2}
+      propertyPath: "\u4E3B\u52A8\u9884\u52A0\u8F7D\u4E0B\u4E00\u573A\u666F"
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fae616cb0680d643b337c20ab1cd3fa, type: 2}
   m_IsPrefabParent: 0
@@ -16310,7 +16320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeID: 0
-  LevelToLoad: _TitleScene
+  LevelToLoad: -1
   SplashLogo: {fileID: 2800000, guid: 8742fbec2f813a343b9fdd731f7d1bbf, type: 3}
   SplashLogoList: []
   FadeSpeed: 0.25

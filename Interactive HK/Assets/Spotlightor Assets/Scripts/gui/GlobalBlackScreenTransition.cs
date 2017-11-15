@@ -16,7 +16,7 @@ public class GlobalBlackScreenTransition : ColorScreenTransition
 				instance = go.AddComponent<GlobalBlackScreenTransition> ();
                 //instance.outWhenAwake = false;
 				instance.autoActivate = true;
-				instance.durationIn = 0.5f;
+				instance.durationIn = 0.8f;
 				instance.durationOut = 0.4f;
 				instance.delayOut = 0.1f;
                 //instance.delayIn = 0.5f;

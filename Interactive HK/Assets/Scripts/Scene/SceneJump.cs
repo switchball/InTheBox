@@ -62,4 +62,15 @@ public class SceneJump : MonoBehaviour {
         SceneManager.LoadScene(scene);
 
     }
+
+    IEnumerator L(int scene)
+    {
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene(scene);
+    }
+
+    public void GoToNextSceneWithDelayed (int scene)
+    {
+        StartCoroutine(L(scene));
+    }
 }

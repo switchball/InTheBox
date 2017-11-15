@@ -7,7 +7,7 @@ public class SplashScreen : MonoBehaviour
     //模式id
     public int modeID = 0;
     //要加载的关卡
-    public string LevelToLoad = "";
+    public int LevelToLoad = -1;
     //Logo贴图
     public Texture2D SplashLogo;
     //Logos贴图
@@ -88,7 +88,7 @@ public class SplashScreen : MonoBehaviour
             //DontDestroyOnLoad(Camera.main);
         }
         //检查目标关卡是否为空
-        if ((Application.levelCount <= 1) || (LevelToLoad == ""))
+        if ((Application.levelCount <= 1) || (LevelToLoad == -1))
         {
             Debug.Log("There is not have the level to load please check again");
             return;
@@ -245,7 +245,7 @@ public class SplashScreen : MonoBehaviour
         Debug.Log("JumpNextScene");
         if (async == null)
         {
-            if (LevelToLoad != "")
+            if (LevelToLoad != -1)
                 SceneManager.LoadScene(LevelToLoad);
             else
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -265,7 +265,7 @@ public class SplashScreen : MonoBehaviour
     IEnumerator ScenePreLoad()
     {
         yield return new WaitForSeconds(1.0f);
-        if (LevelToLoad != "")
+        if (LevelToLoad != -1)
             async = SceneManager.LoadSceneAsync(LevelToLoad);
         else
             async = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
