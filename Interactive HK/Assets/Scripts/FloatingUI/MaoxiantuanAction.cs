@@ -15,6 +15,7 @@ public class MaoxiantuanAction : MonoBehaviour {
     public bool 点击一次后消失 = false;
     public UnityEvent leftClick;
     public UnityEvent rightClick;
+    private bool IsLeftClickInvoked = false;
 
     private GameObject player;
     private Animator anim;
@@ -95,7 +96,9 @@ public class MaoxiantuanAction : MonoBehaviour {
         // 如果点击了鼠标左键，则触发leftclick事件
         if (mInView && Input.GetMouseButtonDown(0))
         {
-            leftClick.Invoke();
+            if (!IsLeftClickInvoked) // invoke only once (first time)
+                leftClick.Invoke();
+            IsLeftClickInvoked = true;
             if (stateTrigger)
                 stateTrigger.OuterChangeState(true);
             if (点击一次后消失)
