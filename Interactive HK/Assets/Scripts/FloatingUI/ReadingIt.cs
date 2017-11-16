@@ -151,6 +151,12 @@ public class ReadingIt : MonoBehaviour {
         spriteIndex++;
     }
 
+    public void CancelReading()
+    {
+        // Cancel when ESCAPE is pressed.
+        // TODOs
+    }
+
     public void FinishReading()
     {
         Debug.LogWarning("EndReading");

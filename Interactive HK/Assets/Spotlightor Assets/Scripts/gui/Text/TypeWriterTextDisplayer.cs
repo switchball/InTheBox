@@ -31,7 +31,7 @@ public class TypeWriterTextDisplayer : MonoBehaviour
 
 	public void TypewriteText (string text)
 	{
-		typewrtingText = text;
+		typewrtingText = text.Replace("|", "\n");
 		StopCoroutine ("TypeWriteAllCharacters");
 		OnStarted ();
 

@@ -96,7 +96,7 @@ public class MaoxiantuanAction : MonoBehaviour {
         // 如果点击了鼠标左键，则触发leftclick事件
         if (mInView && Input.GetMouseButtonDown(0))
         {
-            if (!IsLeftClickInvoked) // invoke only once (first time)
+            //if (!IsLeftClickInvoked) // invoke only once (first time)
                 leftClick.Invoke();
             IsLeftClickInvoked = true;
             if (stateTrigger)
