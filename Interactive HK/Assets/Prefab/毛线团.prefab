@@ -109,7 +109,7 @@ MonoBehaviour:
   RespondDistance: 10
   transitionManager: {fileID: 0}
   whatToRead: {fileID: 0}
-  "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 0
+  "\u70B9\u51FB\u4E00\u6B21\u540E\u6D88\u5931": 1
   leftClick:
     m_PersistentCalls:
       m_Calls: []
