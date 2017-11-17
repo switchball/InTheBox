@@ -58,39 +58,53 @@ public class RespondToAction : MonoBehaviour {
             else
                 a = 1 * a + 1;
             resizeCompoment.animScaleMultiplier = a;
-            if (mInView)
+            if (anim.GetBool("Clicked"))
             {
-                // Open Box 
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+                resizeCompoment.animScaleMultiplier = 2;
+                if (!mInView)
                 {
-                    anim.SetFloat("PlaySpeed", 1.0f);
-                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
-                        anim.Play("CubeOpen0", -1, 0); // start from normalizedTime = 0
-                }
-                else
-                {
-                    anim.Play("CubeOpen0");
+                    anim.SetBool("Clicked", false);
+                    anim.SetFloat("PlaySpeed", -1.0f);
+                    anim.Play("CubeShow", 0, 1);
                 }
             }
             else
-            {
-                // Close Box
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+                if (mInView)
                 {
-                    anim.SetFloat("PlaySpeed", -1.0f);
-                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-                        anim.Play("CubeOpen0", -1, 1); // start from normalizedTime = 1
+                    // Open Box 
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeShow"))
+                    {
+                        anim.SetFloat("PlaySpeed", 1.0f);
+                        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
+                            anim.Play("CubeShow", -1, 0); // start from normalizedTime = 0
+                    }
+                    else
+                    {
+                        anim.Play("CubeShow");
+                    }
                 }
                 else
                 {
-                    anim.Play("CubeOpen0");
+                    // Close Box
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeShow"))
+                    {
+                        anim.SetFloat("PlaySpeed", -1.0f);
+                        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+                            anim.Play("CubeShow", -1, 1); // start from normalizedTime = 1
+                    }
+                    else
+                    {
+                        anim.Play("CubeShow");
+                    }
                 }
-            }
         }
 
         // 如果点击了鼠标，则触发transition动画
         if (mInView && Input.GetMouseButtonDown(0))
         {
+            anim.SetBool("Clicked", true);
+            anim.Play("CubeOpen");
+
             if (whatToRead) {
                 if (whatToRead.GetReadingStatus() == false)
                     whatToRead.StartReading();
@@ -112,10 +126,17 @@ public class RespondToAction : MonoBehaviour {
 
     IEnumerator LateDisable()
     {
-
-        yield return new WaitForSeconds(0.5f);
-
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        var a = gameObject.GetComponent<ColorTransitionManager>();
+        if (a != null)
+        {
+            a.TransitionOut();
+            yield return null;
+        }
+        else
+        {
+            yield return new WaitForSeconds(1.5f);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
         //Do Function here...
     }
 
