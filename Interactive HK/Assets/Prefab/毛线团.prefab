@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52562ee1b4bac1b4fb330e539493e0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardDistance: 120
+  standardDistance: 150
   visibleDistance: {x: 10, y: 16}
   onFirstSight:
     m_PersistentCalls:
