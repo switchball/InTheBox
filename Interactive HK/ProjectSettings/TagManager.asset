@@ -24,6 +24,9 @@ TagManager:
   - OverlayCanvas
   - SingleBGM
   - OverlayCanvasAdvanced
+  - SubstitleTextCorner1
+  - SubstitleTextCorner2
+  - SubstitleTextCorner0
   layers:
   - Default
   - TransparentFX
