@@ -74,7 +74,8 @@ public class ResizeByDistance : MonoBehaviour {
         float ratio = distance / standardDistance;
         transform.localScale = mScale * ratio * animScaleMultiplier;
         float progress = Mathf.InverseLerp(visibleDistance.x, visibleDistance.y, distance);
-        ColorDisplayer.Display(Color.Lerp(colorIn, colorOut, progress));
+        if (distance >= visibleDistance.x)
+            ColorDisplayer.Display(Color.Lerp(colorIn, colorOut, progress));
 
         // distance to event
         if (!firstSightTriggered)
