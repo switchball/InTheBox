@@ -63,46 +63,61 @@ public class MaoxiantuanAction : MonoBehaviour {
             else
                 a = 1 * a + 1;
             resizeCompoment.animScaleMultiplier = a;
-            if (mInView)
+            if (anim.GetBool("Clicked"))
             {
-                // Open Box 
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
+                resizeCompoment.animScaleMultiplier = 2;
+                if (!mInView)
                 {
-                    anim.SetFloat("PlaySpeed", 1.0f);
-                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
-                        anim.Play("CubeOpen0", -1, 0); // start from normalizedTime = 0
-                }
-                else
-                {
-                    anim.Play("CubeOpen0");
-                }
-            }
-            else
-            {
-                // Close Box
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeOpen0"))
-                {
+                    anim.SetBool("Clicked", false);
                     anim.SetFloat("PlaySpeed", -1.0f);
-                    if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-                        anim.Play("CubeOpen0", -1, 1); // start from normalizedTime = 1
+                    anim.Play("CubeShow", 0, 1);
+                }
+            } else
+                if (mInView)
+                {
+                    // Open Box 
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeShow"))
+                    {
+                        anim.SetFloat("PlaySpeed", 1.0f);
+                        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0)
+                            anim.Play("CubeShow", -1, 0); // start from normalizedTime = 0
+                    }
+                    else
+                    {
+                        anim.Play("CubeShow");
+                    }
                 }
                 else
                 {
-                    anim.Play("CubeOpen0");
+                    // Close Box
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("CubeShow"))
+                    {
+                        anim.SetFloat("PlaySpeed", -1.0f);
+                        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+                            anim.Play("CubeShow", -1, 1); // start from normalizedTime = 1
+                    }
+                    else
+                    {
+                        anim.Play("CubeShow");
+                    }
                 }
-            }
         }
 
         // 如果点击了鼠标左键，则触发leftclick事件
         if (mInView && Input.GetMouseButtonDown(0))
         {
+            anim.SetBool("Clicked", true);
+            anim.Play("CubeOpen");
             //if (!IsLeftClickInvoked) // invoke only once (first time)
-                leftClick.Invoke();
+            leftClick.Invoke();
             IsLeftClickInvoked = true;
             if (stateTrigger)
                 stateTrigger.OuterChangeState(true);
             if (点击一次后消失)
-                StartCoroutine(LateDisable());
+            {
+                gameObject.GetComponent<ColorTransitionManager>().TransitionOut();
+                //StartCoroutine(LateDisable());
+            }
         }
         // 如果点击了鼠标右键，则触发rightclick事件
         if (mInView && Input.GetMouseButtonDown(1))
@@ -127,10 +142,17 @@ public class MaoxiantuanAction : MonoBehaviour {
 
     IEnumerator LateDisable()
     {
-
-        yield return new WaitForSeconds(0.5f);
-
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        var a = gameObject.GetComponent<ColorTransitionManager>();
+        if (a != null)
+        {
+            a.TransitionOut();
+            Debug.Log(a);
+            yield return null;
+        } else
+        {
+            yield return new WaitForSeconds(1.5f);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
         //Do Function here...
     }
 

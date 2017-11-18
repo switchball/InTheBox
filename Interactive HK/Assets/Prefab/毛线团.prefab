@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114797289634759316}
   - component: {fileID: 114582109374345398}
   - component: {fileID: 114164054503231092}
+  - component: {fileID: 114791008567107516}
   m_Layer: 0
   m_Name: "\u6BDB\u7EBF\u56E2"
   m_TagString: Untagged
@@ -120,6 +121,28 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114791008567107516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1620646797612866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0ba9d425693984aa9c231342fcdab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outWhenAwake: 0
+  autoActivate: 1
+  delayIn: 0
+  delayOut: 0.5
+  ignoreTimeScale: 0
+  durationIn: 0.8
+  durationOut: 1
+  easeIn: 21
+  easeOut: 21
+  colorIn: {r: 1, g: 1, b: 1, a: 1}
+  colorOut: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &114797289634759316
 MonoBehaviour:
   m_ObjectHideFlags: 1
