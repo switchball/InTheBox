@@ -27,8 +27,11 @@ public class SubtitleTransitionCommand : CoroutineCommandBehavior
     private void OnEnable()
     {
         GameObject x = GameObject.FindGameObjectWithTag(subtitleTag);
-        subtitleDisplayer = x.GetComponent<GenericTextDisplayer>();
-        transition = x.GetComponent<TransitionManager>();
+        if (x != null)
+        {
+            subtitleDisplayer = x.GetComponent<GenericTextDisplayer>();
+            transition = x.GetComponent<TransitionManager>();
+        }
     }
 
     protected override IEnumerator CoroutineCommand()
@@ -63,6 +66,8 @@ public class SubtitleTransitionCommand : CoroutineCommandBehavior
     public void ChangeSubtitle()
     {
         //subtitle = subtitle.Replace("\\n", "\n");
+        GameObject x = GameObject.FindGameObjectWithTag(subtitleTag);
+        subtitleDisplayer = x.GetComponent<GenericTextDisplayer>();
         subtitleDisplayer.Text = subtitle.Replace("|", "\n");
     }
 
