@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.45588237, g: 0.629537, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientGroundColor: {r: 0.5735294, g: 0.38235307, b: 0, a: 1}
-  m_AmbientIntensity: 0
+  m_AmbientIntensity: 1.43
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: c84553f20714cd341ba7092e1a728e28, type: 2}
@@ -9362,7 +9362,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532360121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.47, y: -15.5, z: 23.43}
+  m_LocalPosition: {x: 339.5, y: -3.5, z: -3.6}
   m_LocalScale: {x: 100, y: 4, z: 100}
   m_Children: []
   m_Father: {fileID: 1568756725}
@@ -14747,11 +14747,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
@@ -32828,15 +32828,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
