@@ -136,7 +136,7 @@ public class ListenMain : MonoBehaviour {
 			questions [qID].Shuffle3 ();
 			audioSource.clip = promptAudio;
 			audioSource.Play ();
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (0.3f);
 
 			// Retrive question data
 			ListenQuestion question = questions [qID];
