@@ -67,6 +67,8 @@ public class SubtitleTransitionCommand : CoroutineCommandBehavior
     {
         //subtitle = subtitle.Replace("\\n", "\n");
         GameObject x = GameObject.FindGameObjectWithTag(subtitleTag);
+        if (x == null)
+            Debug.LogError("Canvans disabled?");
         subtitleDisplayer = x.GetComponent<GenericTextDisplayer>();
         subtitleDisplayer.Text = subtitle.Replace("|", "\n");
     }

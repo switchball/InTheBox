@@ -81,6 +81,8 @@ public class ArriveTrigger : MonoBehaviour {
     {
         if (!Camera.main)
             return false;
+        if (lookPosObj == null)
+            return true;
         Vector3 pos = Camera.main.WorldToViewportPoint(lookPosObj.position);
         return 0.2f <= pos.x && pos.x <= 0.8f
             && 0.2f <= pos.y && pos.y <= 0.8f
