@@ -3975,7 +3975,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 7878.5566, y: 7878.5566, z: 0}
+  Offset: {x: 7891.2236, y: 7891.2236, z: 0}
 --- !u!108 &172200908
 Light:
   m_ObjectHideFlags: 0
@@ -7474,10 +7474,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -0.00000011625659
+    e00: -0.00000011632481
     e01: 0
-    e02: -0.97523105
-    e03: 4.8761573
+    e02: -0.9758034
+    e03: 4.8790193
     e10: 0
     e11: -1.7320508
     e12: 0
@@ -7491,10 +7491,10 @@ MonoBehaviour:
     e32: -0.00000011920929
     e33: -18.500002
   LastMatrixVP:
-    e00: -0.00000011625659
+    e00: -0.00000011632481
     e01: 0
-    e02: -0.97523105
-    e03: 4.8761573
+    e02: -0.9758034
+    e03: 4.8790193
     e10: 0
     e11: 1.7320508
     e12: 0
@@ -9800,7 +9800,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 7872.6455, y: 7872.6455, z: 0}
+  Offset: {x: 7885.3125, y: 7885.3125, z: 0}
 --- !u!108 &440913086
 Light:
   m_ObjectHideFlags: 0
@@ -12487,21 +12487,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToShow: []
   objectsToHide: []
-  command: {fileID: 839473745}
+  command: {fileID: 0}
   hideRenderWhenPlay: 1
   persistActiveState: 1
   status: 0
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1078947438}
+        m_MethodName: SpecialResetPlayerPosDelayed
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -21922,7 +21922,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 7883.569, y: 7883.569, z: 0}
+  Offset: {x: 7896.236, y: 7896.236, z: 0}
 --- !u!108 &1051586001
 Light:
   m_ObjectHideFlags: 0
@@ -22367,6 +22367,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50.000008, y: 1.0000002, z: 80.000046}
   m_Center: {x: -0.0000076293945, y: 0.0000019073486, z: -0.000002861023}
+--- !u!114 &1078947438 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114068022573926934, guid: 1cdcc9718d5939c4e8907bfd82cffb51,
+    type: 2}
+  m_PrefabInternal: {fileID: 480865749}
+  m_Script: {fileID: 11500000, guid: 825efe367cfbf464cb570601d5459a43, type: 3}
 --- !u!1001 &1080043967
 Prefab:
   m_ObjectHideFlags: 0
@@ -41876,22 +41882,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 170.5
+      value: 284.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -96
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 321
+      value: 549
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 172
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -41906,22 +41912,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 170.5
+      value: 284.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -96
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 321
+      value: 549
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 172
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive

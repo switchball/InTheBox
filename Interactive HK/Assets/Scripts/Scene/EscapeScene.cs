@@ -42,5 +42,17 @@ public class EscapeScene : MonoBehaviour {
         }
 
     }
+
+    public void SpecialResetPlayerPosDelayed(float t)
+    {
+        StartCoroutine(D(t));
+    }
+
+    IEnumerator D(float t)
+    {
+        yield return new WaitForSeconds(t);
+        Vector3 p = new Vector3(18.5f, -0.5f, 5.0f);
+        GameObject.FindGameObjectWithTag("Player").transform.position = p;
+    }
     
 }
