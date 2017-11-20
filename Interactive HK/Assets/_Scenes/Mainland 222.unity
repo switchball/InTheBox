@@ -5754,7 +5754,7 @@ MonoBehaviour:
   easeIn: 21
   easeOut: 21
   inAudioSetting:
-    volume: 1
+    volume: 0.12
   outAudioSetting:
     volume: 0
   autoControl: 1
@@ -5769,7 +5769,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b52afe2a0e7fc141a1cd8d2e5cb132b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.17
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7707,7 +7707,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 409
+      value: 191
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -7717,7 +7717,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 798
+      value: 362
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -7737,7 +7737,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 409
+      value: 191
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -7747,7 +7747,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 798
+      value: 362
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -33629,7 +33629,18 @@ MonoBehaviour:
   status: 0
   onTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 399013880}
+        m_MethodName: TransitionOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!23 &2112478838

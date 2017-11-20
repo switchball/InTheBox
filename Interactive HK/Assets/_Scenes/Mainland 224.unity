@@ -29056,7 +29056,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1441190556
 BoxCollider:
@@ -36209,11 +36209,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ebcd4140617cf24e84b3ca79b862966, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
