@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Collider))]
@@ -14,6 +15,8 @@ public class Ding : MonoBehaviour {
     public float waitTime;
     public string textShown;
     public bool hideRenderWhenPlay = true;
+
+    public UnityEvent onTrigger;
 
     private AudioSource audioSource;
     private bool flag;
@@ -56,6 +59,7 @@ public class Ding : MonoBehaviour {
             {
                 StartCoroutine(DingCoroutine());
                 flag = true;
+                onTrigger.Invoke();
             }
         }
     }

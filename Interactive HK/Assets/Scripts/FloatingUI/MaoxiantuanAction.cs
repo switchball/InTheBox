@@ -17,6 +17,8 @@ public class MaoxiantuanAction : MonoBehaviour {
     public UnityEvent rightClick;
     private bool IsLeftClickInvoked = false;
 
+    public Light mLight;
+
     private GameObject player;
     private Animator anim;
     private bool mInView;
@@ -29,6 +31,7 @@ public class MaoxiantuanAction : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         resizeCompoment = GetComponent<ResizeByDistance>();
+        mLight = GetComponent<Light>();
         if (RespondDistance == 0)
         {
             Debug.LogWarning("需要设置响应操作时玩家距离物体的最大范围，自动重置为5");
@@ -111,6 +114,8 @@ public class MaoxiantuanAction : MonoBehaviour {
             //if (!IsLeftClickInvoked) // invoke only once (first time)
             leftClick.Invoke();
             IsLeftClickInvoked = true;
+            if (mLight)
+                mLight.enabled = true;
             if (stateTrigger)
                 stateTrigger.OuterChangeState(true);
             if (点击一次后消失)

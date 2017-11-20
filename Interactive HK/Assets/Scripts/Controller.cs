@@ -40,4 +40,9 @@ public class Controller : MonoBehaviour {
 		// Actually move the character controller in the movement direction
 		myController.Move(movement);
 	}
+
+    public void SetMoveSpeed(float v)
+    {
+        moveSpeed = v;
+    }
 }
