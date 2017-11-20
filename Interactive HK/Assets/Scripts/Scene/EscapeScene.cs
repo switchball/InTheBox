@@ -36,6 +36,11 @@ public class EscapeScene : MonoBehaviour {
             isPressed = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
     }
     
 }
