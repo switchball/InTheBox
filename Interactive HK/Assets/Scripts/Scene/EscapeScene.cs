@@ -41,6 +41,11 @@ public class EscapeScene : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
     }
 
     public void SpecialResetPlayerPosDelayed(float t)
