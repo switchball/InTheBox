@@ -114,14 +114,12 @@ public class MaoxiantuanAction : MonoBehaviour {
             //if (!IsLeftClickInvoked) // invoke only once (first time)
             leftClick.Invoke();
             IsLeftClickInvoked = true;
-            if (mLight)
-                mLight.enabled = true;
             if (stateTrigger)
                 stateTrigger.OuterChangeState(true);
             if (点击一次后消失)
             {
                 gameObject.GetComponent<ColorTransitionManager>().TransitionOut();
-                //StartCoroutine(LateDisable());
+                StartCoroutine(LateDisable());
             }
         }
         // 如果点击了鼠标右键，则触发rightclick事件
@@ -152,10 +150,14 @@ public class MaoxiantuanAction : MonoBehaviour {
         {
             a.TransitionOut();
             Debug.Log(a);
-            yield return null;
+            yield return new WaitForSeconds(1.5f);
+            if (mLight)
+                mLight.enabled = true;
         } else
         {
             yield return new WaitForSeconds(1.5f);
+            if (mLight)
+                mLight.enabled = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
         //Do Function here...
