@@ -116,6 +116,11 @@ public class MaoxiantuanAction : MonoBehaviour {
             IsLeftClickInvoked = true;
             if (stateTrigger)
                 stateTrigger.OuterChangeState(true);
+            if (whatToRead)
+            {
+                if (whatToRead.GetReadingStatus() == false)
+                    whatToRead.StartReading();
+            }
             if (点击一次后消失)
             {
                 gameObject.GetComponent<ColorTransitionManager>().TransitionOut();
