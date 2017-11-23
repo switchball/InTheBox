@@ -2016,7 +2016,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 22505.158, y: 22505.158, z: 0}
+  Offset: {x: 22514.412, y: 22514.412, z: 0}
 --- !u!108 &375521971
 Light:
   m_ObjectHideFlags: 0
@@ -3319,7 +3319,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 20098.025, y: 20098.025, z: 0}
+  Offset: {x: 20107.28, y: 20107.28, z: 0}
 --- !u!108 &596571286
 Light:
   m_ObjectHideFlags: 0
@@ -5346,7 +5346,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 338.5
+      value: 349.5
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5356,7 +5356,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 657
+      value: 679
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5413,7 +5413,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 338.5
+      value: 349.5
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -5423,7 +5423,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 657
+      value: 679
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -9158,7 +9158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4768114944881460, guid: a1a9c78b826071a4db4c7f20f91ad8a5, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4768114944881460, guid: a1a9c78b826071a4db4c7f20f91ad8a5, type: 2}
       propertyPath: m_LocalScale.z
@@ -9181,7 +9181,7 @@ Prefab:
     - target: {fileID: 114837938151748506, guid: a1a9c78b826071a4db4c7f20f91ad8a5,
         type: 2}
       propertyPath: standardDistance
-      value: 20
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 114837938151748506, guid: a1a9c78b826071a4db4c7f20f91ad8a5,
         type: 2}
@@ -9867,10 +9867,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -1.2068789
-    e01: 0.0000000022479871
-    e02: 0.000000105508704
-    e03: 54.550926
+    e00: -1.2074372
+    e01: 0.000000002249027
+    e02: 0.00000010555751
+    e03: 54.57616
     e10: -0.000000003994455
     e11: -2.1445067
     e12: 3.4920635e-16
@@ -9884,10 +9884,10 @@ MonoBehaviour:
     e32: -1
     e33: 10.700004
   LastMatrixVP:
-    e00: -1.2068789
-    e01: 0.0000000022479871
-    e02: 0.000000105508704
-    e03: 54.550926
+    e00: -1.2074372
+    e01: 0.000000002249027
+    e02: 0.00000010555751
+    e03: 54.57616
     e10: 0.000000003994455
     e11: 2.1445067
     e12: -3.4920635e-16

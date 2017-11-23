@@ -3753,6 +3753,119 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50.000034, y: 1.0000157, z: 80.000046}
   m_Center: {x: -0.0000015497208, y: 0.0000019073486, z: -0.0000019669533}
+--- !u!1 &272355876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 272355879}
+  - component: {fileID: 272355877}
+  - component: {fileID: 272355878}
+  m_Layer: 0
+  m_Name: Subtitle_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &272355877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272355876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5366bc8f6f8564e9e2513b1e8d1d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeOnAwake: 0
+  subtitle: "\u4E0D\u4FE1\u4F60\u95ED\u4E0A\u773C"
+  subtitleTag: SubstitleText3
+  transitionType: 2
+  inAndOutWaitTime: 2
+  waitTransitionComplete: 1
+--- !u!114 &272355878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272355876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5442b4135a428dd4c8b4a8b0d72f9e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 272355877}
+  started:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1491643648}
+        m_MethodName: OuterChangeState
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1536398212}
+        m_MethodName: TransitionIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1151768978}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  ended:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 663515280}
+        m_MethodName: JumpNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!4 &272355879
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272355876}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1491643646}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273085895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,7 +6052,7 @@ MonoBehaviour:
   outWhenAwake: 0
   autoActivate: 1
   delayIn: 0.3
-  delayOut: 2
+  delayOut: 4.1
   ignoreTimeScale: 0
   durationIn: 0
   durationOut: 2
@@ -7966,22 +8079,22 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 419.5
+      value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -236
+      value: -187
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 819
+      value: 644
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 452
+      value: 354
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -7996,22 +8109,22 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 419.5
+      value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -236
+      value: -187
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 819
+      value: 644
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 452
+      value: 354
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive
@@ -9134,7 +9247,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 4816.9854, y: 4816.9854, z: 0}
+  Offset: {x: 4890.472, y: 4890.472, z: 0}
 --- !u!108 &558586749
 Light:
   m_ObjectHideFlags: 0
@@ -16158,7 +16271,7 @@ MonoBehaviour:
   outWhenAwake: 1
   autoActivate: 0
   delayIn: 0.1
-  delayOut: 3
+  delayOut: 2
   ignoreTimeScale: 0
   durationIn: 1
   durationOut: 1
@@ -18021,7 +18134,7 @@ Prefab:
     - target: {fileID: 114311316994116824, guid: b9db14962cdf26c468241780741c6c43,
         type: 2}
       propertyPath: "\u662F\u5426\u5F3A\u5236\u79FB\u52A8\u89C6\u89D2"
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114311316994116824, guid: b9db14962cdf26c468241780741c6c43,
         type: 2}
@@ -18528,7 +18641,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 4806.0864, y: 4806.0864, z: 0}
+  Offset: {x: 4879.573, y: 4879.573, z: 0}
 --- !u!108 &1181764966
 Light:
   m_ObjectHideFlags: 0
@@ -19755,7 +19868,7 @@ MonoBehaviour:
   FogTransitionSize: 5
   MaxLightDistance: 128
   AboveFogPercent: 0.1
-  Offset: {x: 4816.9854, y: 4816.9854, z: 0}
+  Offset: {x: 4890.472, y: 4890.472, z: 0}
 --- !u!108 &1231312761
 Light:
   m_ObjectHideFlags: 0
@@ -20711,7 +20824,7 @@ Transform:
   m_LocalScale: {x: 10, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 1491643646}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1319068273
 MonoBehaviour:
@@ -21139,7 +21252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1344323798}
   - component: {fileID: 1344323797}
-  - component: {fileID: 1344323799}
   m_Layer: 0
   m_Name: Subtitle_3
   m_TagString: Untagged
@@ -21159,11 +21271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   executeOnAwake: 0
-  subtitle: "\u201C\u6CA1\u5173\u7CFB\uFF0C\u5176\u5B9E\u4F60\u80FD\u542C\u61C2\u5F88\u591A|\u4E0D\u4FE1\u4F60\u95ED\u4E0A\u773C\u8BD5\u8BD5\u3002\u201D"
-  subtitleTag: SubstitleTextCorner0
+  subtitle: "\u6CA1\u5173\u7CFB\uFF0C\u4F60\u80FD\u542C\u61C2\u5F88\u591A"
+  subtitleTag: SubstitleText2
   transitionType: 2
   inAndOutWaitTime: 2
-  waitTransitionComplete: 1
+  waitTransitionComplete: 0
 --- !u!4 &1344323798
 Transform:
   m_ObjectHideFlags: 0
@@ -21177,72 +21289,6 @@ Transform:
   m_Father: {fileID: 1491643646}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1344323799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1344323796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5442b4135a428dd4c8b4a8b0d72f9e7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1344323797}
-  started:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1491643648}
-        m_MethodName: OuterChangeState
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1536398212}
-        m_MethodName: TransitionIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1151768978}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  ended:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 663515280}
-        m_MethodName: JumpNextScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!1 &1349208581
 GameObject:
   m_ObjectHideFlags: 0
@@ -23434,10 +23480,10 @@ MonoBehaviour:
   MapToLDR: 0
   RemoveColorBanding: 1
   MatrixVP:
-    e00: -0.00000012851659
+    e00: -0.00000012863944
     e01: 0
-    e02: -1.0780754
-    e03: -22.93517
+    e02: -1.079106
+    e03: -22.957094
     e10: 0
     e11: -1.9209821
     e12: 0
@@ -23451,10 +23497,10 @@ MonoBehaviour:
     e32: -0.00000011920929
     e33: 150.83562
   LastMatrixVP:
-    e00: -0.00000012851659
+    e00: -0.00000012863944
     e01: 0
-    e02: -1.0780754
-    e03: -22.93517
+    e02: -1.079106
+    e03: -22.957094
     e10: 0
     e11: 1.9209821
     e12: 0
@@ -24739,6 +24785,7 @@ Transform:
   - {fileID: 1393062199}
   - {fileID: 1633014273}
   - {fileID: 1344323798}
+  - {fileID: 272355879}
   - {fileID: 1319068272}
   m_Father: {fileID: 1665886585}
   m_RootOrder: 2
@@ -24759,12 +24806,14 @@ MonoBehaviour:
   - "\u201C\u55E8\u3002\u201D"
   - "\u201C\u4F60\u4E0D\u61C2\u7CA4\u8BED\uFF0C\u5BF9\u5417\uFF1F\u201D"
   - "\u201C\u2026\u2026\u662F\u7684\u3002\u201D"
-  - "\u201C\u6CA1\u5173\u7CFB\uFF0C\u5176\u5B9E\u4F60\u80FD\u542C\u61C2\u5F88\u591A|\u4E0D\u4FE1\u4F60\u95ED\u4E0A\u773C\u8BD5\u8BD5\u3002\u201D"
+  - "\u6CA1\u5173\u7CFB\uFF0C\u4F60\u80FD\u542C\u61C2\u5F88\u591A"
+  - "\u4E0D\u4FE1\u4F60\u95ED\u4E0A\u773C"
   commandSequence:
   - {fileID: 1722940706}
   - {fileID: 1393062198}
   - {fileID: 1633014272}
   - {fileID: 1344323797}
+  - {fileID: 272355877}
 --- !u!114 &1491643648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26669,7 +26718,7 @@ MonoBehaviour:
   subtitle: "\u201C\u2026\u2026\u662F\u7684\u3002\u201D"
   subtitleTag: SubstitleTextCorner2
   transitionType: 2
-  inAndOutWaitTime: 3
+  inAndOutWaitTime: 2
   waitTransitionComplete: 1
 --- !u!4 &1633014273
 Transform:
@@ -27770,7 +27819,7 @@ MonoBehaviour:
   subtitle: "\u4E16\u754C\u6DF7\u6C8C\u672A\u5F00\uFF0C\u56DE\u5230\u4E86\u65F6\u95F4\u88AB\u5B55\u80B2\u51FA\u6765\u4E4B\u524D"
   subtitleTag: SubstitleText
   transitionType: 2
-  inAndOutWaitTime: 4
+  inAndOutWaitTime: 2
   waitTransitionComplete: 1
 --- !u!1 &1694197825
 GameObject:
@@ -28619,10 +28668,10 @@ MonoBehaviour:
   outWhenAwake: 1
   autoActivate: 0
   delayIn: 0.1
-  delayOut: 2
+  delayOut: 1
   ignoreTimeScale: 0
   durationIn: 2
-  durationOut: 2
+  durationOut: 1
   easeIn: 21
   easeOut: 21
   colorIn: {r: 1, g: 1, b: 1, a: 1}

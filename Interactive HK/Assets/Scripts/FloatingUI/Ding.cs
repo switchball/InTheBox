@@ -72,7 +72,7 @@ public class Ding : MonoBehaviour {
         LockMove();
         audioSource.Play();
         yield return new WaitForSeconds(waitTime);
-        blackScreen.SetActive(false);
+        //blackScreen.SetActive(false);
         UnlockMove();
     }
 
