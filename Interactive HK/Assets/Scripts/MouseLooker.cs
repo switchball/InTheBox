@@ -17,11 +17,16 @@ public class MouseLooker : MonoBehaviour {
 	private Quaternion m_CameraTargetRot;
 	private Transform character;
 	private Transform cameraTransform;
+    // temp roration variables
+    private Quaternion m_OldCharacterTargetRot;
+    private Quaternion m_OldCameraTargetRot;
 
     private float m_SmoothTime;
     private float m_DisableInputTimeLeft;
+    private float m_DisableInputTimeTotal;
 
-	void Start() {
+
+    void Start() {
 		// start the game with the cursor locked
 		LockCursor (true);
         StartCoroutine(L());
@@ -115,7 +120,8 @@ public class MouseLooker : MonoBehaviour {
         // check if input is disabled
         if (m_DisableInputTimeLeft > 0)
         {
-            xRot = yRot = 0;
+            xRot /= 3;
+            yRot /= 3;
         }
 
 		// calculate the rotation
@@ -126,8 +132,22 @@ public class MouseLooker : MonoBehaviour {
 		if(clampVerticalRotation)
 			m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
 
-		// update the character and camera based on calculations
-		if(smooth) // if smooth, then slerp over time
+        // special linear move
+        float progress = 1 - m_DisableInputTimeLeft / m_DisableInputTimeTotal;
+        if (progress <= 1.0f)
+        {
+            float a = 5;
+            float p2 = S(progress, a, 0);
+            character.localRotation = Quaternion.Slerp(m_OldCharacterTargetRot, m_CharacterTargetRot,
+                                                        p2);
+            cameraTransform.localRotation = Quaternion.Slerp(m_OldCameraTargetRot, m_CameraTargetRot,
+                                                     p2);
+            Debug.LogWarning(progress + " -> " + p2 + " | " + a);
+            return;
+        }
+
+        // update the character and camera based on calculations
+        if (smooth) // if smooth, then slerp over time
 		{
 			character.localRotation = Quaternion.Slerp (character.localRotation, m_CharacterTargetRot,
                                                         m_SmoothTime * Time.deltaTime);
@@ -141,10 +161,28 @@ public class MouseLooker : MonoBehaviour {
 		}
 	}
 
+    // sigmoid function
+    // k = Exp(-a/2)
+    // r = (1+k)/(1-k)
+    // y = Exp(-a*(progress-0.5))
+    // p' = 0.5*[ (1-y)/(1+y)*r + 1 ]
+    private float S(float progress, float a, float constant_r)
+    {
+        float k = Mathf.Exp(-a * 0.5f);
+        float r = (1 + k) / (1 - k);
+        float y = Mathf.Exp(-a * (progress - 0.5f));
+        float p = 0.5f * ((1 - y) / (1 + y) * r + 1);
+        return p;
+    }
+
     public void LookAt(Vector3 pos, float smoothTime, float disableInputTime)
     {
+        m_DisableInputTimeTotal = disableInputTime;
         m_DisableInputTimeLeft = disableInputTime;
         m_SmoothTime = smoothTime;
+
+        m_OldCharacterTargetRot = character.localRotation;
+        m_OldCameraTargetRot = cameraTransform.localRotation;
 
         Vector3 dir = pos - transform.position;
         var q = Quaternion.LookRotation(dir);
@@ -174,6 +212,8 @@ public class MouseLooker : MonoBehaviour {
 
     public Quaternion GetRotation()
     {
+        if (character == null || character.localRotation == null)
+            return Quaternion.identity;
         Vector3 euler = character.localRotation.eulerAngles + cameraTransform.localRotation.eulerAngles;
         return Quaternion.Euler(euler);
     }

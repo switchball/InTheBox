@@ -26,6 +26,11 @@ public class MaoxiantuanAction : MonoBehaviour {
     private ResizeByDistance resizeCompoment;
     private StateTrigger stateTrigger;
 
+    private bool couldClick = true;
+
+    public bool 点击后看向目标 = false;
+    private ForceCameraMove mCameraScript;
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,6 +46,8 @@ public class MaoxiantuanAction : MonoBehaviour {
             Debug.Log("动画UI没有设置Reading的对象");
         if (stateTrigger == null)
             stateTrigger = GetComponent<StateTrigger>();
+        if (点击后看向目标)
+            mCameraScript = GetComponent<ForceCameraMove>();
     }
 
     // Update is called once per frame
@@ -107,8 +114,9 @@ public class MaoxiantuanAction : MonoBehaviour {
         }
 
         // 如果点击了鼠标左键，则触发leftclick事件
-        if (mInView && Input.GetMouseButtonDown(0))
+        if (mInView && Input.GetMouseButtonDown(0) && couldClick)
         {
+            couldClick = false;
             anim.SetBool("Clicked", true);
             anim.Play("CubeOpen");
             //if (!IsLeftClickInvoked) // invoke only once (first time)
@@ -121,6 +129,10 @@ public class MaoxiantuanAction : MonoBehaviour {
                 if (whatToRead.GetReadingStatus() == false)
                     whatToRead.StartReading();
             }
+            if (点击后看向目标 && mCameraScript != null)
+            {
+                mCameraScript.ForceTurnCamera();
+            } 
             if (点击一次后消失)
             {
                 gameObject.GetComponent<ColorTransitionManager>().TransitionOut();

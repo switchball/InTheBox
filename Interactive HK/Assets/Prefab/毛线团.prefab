@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114164054503231092}
   - component: {fileID: 114791008567107516}
   - component: {fileID: 108201591212537814}
+  - component: {fileID: 114414671437274950}
   m_Layer: 0
   m_Name: "\u6BDB\u7EBF\u56E2"
   m_TagString: Untagged
@@ -122,6 +123,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114414671437274950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1620646797612866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5b4656e4884fa468a01194e96d645c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "\u89C6\u89D2\u79FB\u52A8\u901F\u5EA6": 5
+  "\u9501\u5B9A\u64CD\u4F5C\u65F6\u95F4": 2.5
+  lookPosObj: {fileID: 0}
 --- !u!114 &114447285387929498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +174,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   mLight: {fileID: 0}
+  "\u70B9\u51FB\u540E\u770B\u5411\u76EE\u6807": 0
 --- !u!114 &114791008567107516
 MonoBehaviour:
   m_ObjectHideFlags: 1

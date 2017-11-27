@@ -45,4 +45,9 @@ public class Controller : MonoBehaviour {
     {
         moveSpeed = v;
     }
+
+    public void SetGravity(float g)
+    {
+        gravity = g;
+    }
 }
