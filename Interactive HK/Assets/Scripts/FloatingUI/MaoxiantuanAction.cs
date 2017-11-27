@@ -154,6 +154,11 @@ public class MaoxiantuanAction : MonoBehaviour {
 
     }
 
+    public void ResetClickability()
+    {
+        couldClick = true;
+    }
+
     public void StartTransition()
     {
         if (transitionManager)

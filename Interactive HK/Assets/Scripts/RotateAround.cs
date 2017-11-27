@@ -4,7 +4,7 @@ using System.Collections;
 public class RotateAround : MonoBehaviour {
 
 	public Transform target; // the object to rotate around
-	public int speed; // the speed of rotation
+	public float speed; // the speed of rotation
 	
 	void Start() {
 		if (target == null) 
@@ -21,4 +21,9 @@ public class RotateAround : MonoBehaviour {
 		// third is the degrees to rotate, in this case the speed per second
 		transform.RotateAround(target.transform.position,target.transform.up,speed * Time.deltaTime);
 	}
+
+    public void SetSpeed(float v)
+    {
+        speed = v;
+    }
 }

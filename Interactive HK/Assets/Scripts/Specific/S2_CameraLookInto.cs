@@ -14,6 +14,7 @@ public class S2_CameraLookInto : MonoBehaviour {
     public bool force = false;
 
     public AudioTransitionManager audioTranManager;
+    public ColorTransitionManager colorTranManager;
 
     float accTime = 0;
 
@@ -27,12 +28,18 @@ public class S2_CameraLookInto : MonoBehaviour {
         if (force & stay) {
             accTime += Time.deltaTime;
             cam.orthographicSize = Mathf.Lerp(1.0f, 0.1f, accTime / forceDelay);
+            if (colorTranManager != null)
+                colorTranManager.TransitionIn();
             if (accTime > forceDelay) {
                 // Jump Scene
                 Debug.Log("Goto Scene #0");
                 SceneManager.LoadScene(0);
             }
             return;
+        } else
+        {
+            if (colorTranManager != null)
+                colorTranManager.TransitionOut();
         }
         if (stay)
         {
