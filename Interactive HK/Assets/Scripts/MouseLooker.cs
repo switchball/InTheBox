@@ -23,7 +23,7 @@ public class MouseLooker : MonoBehaviour {
 
     private float m_SmoothTime;
     private float m_DisableInputTimeLeft;
-    private float m_DisableInputTimeTotal;
+    private float m_DisableInputTimeTotal = 1.0f;
 
 
     void Start() {
@@ -134,7 +134,7 @@ public class MouseLooker : MonoBehaviour {
 
         // special linear move
         float progress = 1 - m_DisableInputTimeLeft / m_DisableInputTimeTotal;
-        if (progress <= 1.0f)
+        if (progress <= 1.0f && progress >= 0)
         {
             float a = 5;
             float p2 = S(progress, a, 0);

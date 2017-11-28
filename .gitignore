@@ -3,6 +3,12 @@ Temp/
 
 TimeTravelerRestart/ProjectSettings/ProjectVersion.txt
 
+# Ignore lightingmap
+LightingData.asset
+LightingData.asset.meta
+Lightmap-*_comp*
+
+
 # Visual Studio 2015 cache directory
 /.vs/
 

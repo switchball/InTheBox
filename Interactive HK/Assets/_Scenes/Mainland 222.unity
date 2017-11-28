@@ -6248,7 +6248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outWhenAwake: 0
   autoActivate: 1
-  delayIn: 0.3
+  delayIn: 0.25
   delayOut: 4.1
   ignoreTimeScale: 0
   durationIn: 0
