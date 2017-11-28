@@ -8281,7 +8281,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -211
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -8291,7 +8291,7 @@ Prefab:
     - target: {fileID: 224627440234940796, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 402
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -8311,7 +8311,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -211
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
@@ -8321,7 +8321,7 @@ Prefab:
     - target: {fileID: 224757574103914140, guid: 4906d5ef2bff10645bb54cf4e3dd2522,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 402
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1272130074231344, guid: 4906d5ef2bff10645bb54cf4e3dd2522, type: 2}
       propertyPath: m_IsActive
@@ -12833,6 +12833,26 @@ Prefab:
       propertyPath: m_Text
       value: "\u5355\u51FB\u9F20\u6807\u6253\u5F00\u76D2\u5B50"
       objectReference: {fileID: 0}
+    - target: {fileID: 224356487298098442, guid: f71a93dae56504a48aa3ba9aa93cf8ef,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224356487298098442, guid: f71a93dae56504a48aa3ba9aa93cf8ef,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224356487298098442, guid: f71a93dae56504a48aa3ba9aa93cf8ef,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620827712154842, guid: f71a93dae56504a48aa3ba9aa93cf8ef,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f71a93dae56504a48aa3ba9aa93cf8ef, type: 2}
   m_IsPrefabParent: 0
@@ -14789,7 +14809,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 905321707}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 56.47, y: 0.27, z: 1.8}
+  m_LocalPosition: {x: 60.61, y: 0.27, z: 1.8}
   m_LocalScale: {x: 12.921784, y: 3.5271778, z: 6.0029263}
   m_Children: []
   m_Father: {fileID: 423461423}
@@ -14809,35 +14829,13 @@ MonoBehaviour:
   objectsToShow:
   - {fileID: 556888369}
   objectsToHide: []
-  command: {fileID: 82112969}
+  command: {fileID: 0}
   hideRenderWhenPlay: 1
   persistActiveState: 1
   status: 0
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2132780076}
-        m_MethodName: TransitionIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: TransitionOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 556888375}
         m_MethodName: TransitionOut
         m_Mode: 1
@@ -19921,8 +19919,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38539922, y: 0}
   m_AnchorMax: {x: 0.88872564, y: 0.76600003}
-  m_AnchoredPosition: {x: -613.8, y: 91.698}
-  m_SizeDelta: {x: 48.2, y: 183.4}
+  m_AnchoredPosition: {x: -613.8, y: 123.9}
+  m_SizeDelta: {x: 48.2, y: 119.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1227059850
 AudioSource:
